@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace HelloWorld
 {
-    class Program
+    public class HelloWorld
     {
-        static void Main(string[] args)
+        public String run()
         {
-            Console.WriteLine((new HelloWorld()).run());
+            return "Hello World";
         }
     }
 }
