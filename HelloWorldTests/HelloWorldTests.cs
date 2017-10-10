@@ -16,7 +16,9 @@ namespace HelloWorld.Tests
         [TestMethod()]
         public void runTest()
         {
-            HelloWorld helloWorld = new HelloWorld();
+            MockMe mock = new MockMe();
+
+            HelloWorld helloWorld = new HelloWorld(mock);
 
             Assert.AreEqual("Hello World", helloWorld.run());
         }

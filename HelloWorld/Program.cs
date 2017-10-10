@@ -10,7 +10,9 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Console.WriteLine((new HelloWorld()).run());
+            MockMe message = new MockMe();
+            Console.WriteLine((new HelloWorld(message)).run());
+            Console.ReadLine();
         }
     }
 }
