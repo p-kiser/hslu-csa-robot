@@ -1,2 +1,8 @@
 language: csharp
-solution: Robo.sln
+solution: "./Robo.sln"
+install:
+- travis_retry nuget restore -source "https://www.nuget.org/api/v2" ./Robo.sln
+script:
+- xbuild ./Robo.sln
+- ls ./packages
+- mono ./packages/xunit.runner.console*/tools/xunit.console.exe ./HelloWorldTests/bin/Debug/Fibonacci.Tests.dll
