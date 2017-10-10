@@ -8,9 +8,16 @@ namespace HelloWorld
 {
     public class HelloWorld
     {
+        private MockMe msg;
+
+        public HelloWorld(MockMe msg)
+        {
+            this.msg = msg;
+        }
+
         public String run()
         {
-            return "Hello World";
+            return msg.Message;
         }
     }
 }
