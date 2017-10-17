@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace RobotCtrl
+namespace RobotCtrl.Input
 {
-    public class Class1
+    class DigitalIn
     {
     }
 }
