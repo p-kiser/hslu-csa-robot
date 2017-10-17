@@ -139,7 +139,7 @@ namespace RobotView
             this.Controls.Add(this.switchView1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "ConsoleView";
-            this.Size = new System.Drawing.Size(151, 42);
+            this.Size = new System.Drawing.Size(166, 61);
             this.ResumeLayout(false);
 
 	}

@@ -15,5 +15,15 @@ namespace TestConsole
         {
             InitializeComponent();
         }
+
+        private void consoleView_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void consoleView_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
