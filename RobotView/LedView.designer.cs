@@ -38,6 +38,7 @@ namespace RobotView
             this.ledPictureBox.Location = new System.Drawing.Point(0, 0);
             this.ledPictureBox.Name = "ledPictureBox";
             this.ledPictureBox.Size = new System.Drawing.Size(20, 20);
+            this.ledPictureBox.Click += new System.EventHandler(this.ledPictureBox_Click);
             // 
             // LedView
             // 
