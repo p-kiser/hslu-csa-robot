@@ -10,13 +10,20 @@ namespace RobotView
 {
     public partial class SwitchView : UserControl
     {
-        private bool State { get; set; }
+        private bool state;
 
         public SwitchView()
         {
             InitializeComponent();
-            State = false;
-            switchPictureBox.Image = Resource.SwitchOff;
+            state = false;
         }
-    }
+        public bool State
+        {
+            get { return state; }
+            set
+            {
+                state = value;
+                switchPictureBox.Image = value ? Resource.LedOn : Resource.LedOff;
+            }
+        }
 }

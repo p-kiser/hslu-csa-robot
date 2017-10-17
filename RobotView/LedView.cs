@@ -10,14 +10,25 @@ namespace RobotView
 {
     public partial class LedView : UserControl
     {
+        private bool state;
         public LedView()
         {
             InitializeComponent();
+            state = false;
         }
 
         private void ledPictureBox_Click(object sender, EventArgs e)
         {
 
+        }
+        public bool State
+        {
+            get { return state; }
+            set
+            {
+                state = value;
+                ledPictureBox.Image = value ? Resource.LedOn : Resource.LedOff;
+            }
         }
     }
 }
