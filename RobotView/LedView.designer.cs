@@ -27,10 +27,30 @@ namespace RobotView
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LedView));
+            this.ledPictureBox = new System.Windows.Forms.PictureBox();
+            this.SuspendLayout();
+            // 
+            // ledPictureBox
+            // 
+            this.ledPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ledPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("ledPictureBox.Image")));
+            this.ledPictureBox.Location = new System.Drawing.Point(0, 0);
+            this.ledPictureBox.Name = "ledPictureBox";
+            this.ledPictureBox.Size = new System.Drawing.Size(150, 150);
+            // 
+            // LedView
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.Controls.Add(this.ledPictureBox);
+            this.Name = "LedView";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.PictureBox ledPictureBox;
     }
 }
