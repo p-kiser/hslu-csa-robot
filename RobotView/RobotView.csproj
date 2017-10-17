@@ -51,10 +51,19 @@
       <DependentUpon>LedView.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SwitchView.cs">
+      <SubType>usercontrol</SubType>
+    </Compile>
+    <Compile Include="SwitchView.designer.cs">
+      <DependentUpon>SwitchView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="LedView.resx">
       <DependentUpon>LedView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SwitchView.resx">
+      <DependentUpon>SwitchView.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkTargetsVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
