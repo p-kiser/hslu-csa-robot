@@ -41,51 +41,55 @@ namespace RobotView
             // 
             // switchView1
             // 
-            this.switchView1.Location = new System.Drawing.Point(104, 0);
+            this.switchView1.Location = new System.Drawing.Point(157, 41);
             this.switchView1.Name = "switchView1";
             this.switchView1.Size = new System.Drawing.Size(20, 40);
             this.switchView1.TabIndex = 1;
             // 
             // ledView1
             // 
-            this.ledView1.Location = new System.Drawing.Point(0, 0);
+            this.ledView1.Location = new System.Drawing.Point(53, 41);
             this.ledView1.Name = "ledView1";
             this.ledView1.Size = new System.Drawing.Size(20, 20);
+            this.ledView1.State = false;
             this.ledView1.TabIndex = 0;
             // 
             // switchView2
             // 
-            this.switchView2.Location = new System.Drawing.Point(130, 0);
+            this.switchView2.Location = new System.Drawing.Point(183, 41);
             this.switchView2.Name = "switchView2";
             this.switchView2.Size = new System.Drawing.Size(20, 40);
             this.switchView2.TabIndex = 2;
             // 
             // ledView2
             // 
-            this.ledView2.Location = new System.Drawing.Point(52, 0);
+            this.ledView2.Location = new System.Drawing.Point(105, 41);
             this.ledView2.Name = "ledView2";
             this.ledView2.Size = new System.Drawing.Size(20, 20);
+            this.ledView2.State = false;
             this.ledView2.TabIndex = 3;
             // 
             // ledView3
             // 
-            this.ledView3.Location = new System.Drawing.Point(26, 0);
+            this.ledView3.Location = new System.Drawing.Point(79, 41);
             this.ledView3.Name = "ledView3";
             this.ledView3.Size = new System.Drawing.Size(20, 20);
+            this.ledView3.State = false;
             this.ledView3.TabIndex = 4;
             // 
             // ledView4
             // 
-            this.ledView4.Location = new System.Drawing.Point(78, 0);
+            this.ledView4.Location = new System.Drawing.Point(131, 41);
             this.ledView4.Name = "ledView4";
             this.ledView4.Size = new System.Drawing.Size(20, 20);
+            this.ledView4.State = false;
             this.ledView4.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(3, 23);
+            this.label1.Location = new System.Drawing.Point(56, 64);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(20, 20);
             this.label1.Text = "1";
@@ -95,7 +99,7 @@ namespace RobotView
             // 
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(26, 22);
+            this.label2.Location = new System.Drawing.Point(79, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(20, 20);
             this.label2.Text = "2";
@@ -105,7 +109,7 @@ namespace RobotView
             // 
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(52, 22);
+            this.label3.Location = new System.Drawing.Point(105, 63);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(20, 20);
             this.label3.Text = "3";
@@ -115,7 +119,7 @@ namespace RobotView
             // 
             this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(78, 22);
+            this.label4.Location = new System.Drawing.Point(131, 63);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(20, 20);
             this.label4.Text = "4";
@@ -138,7 +142,7 @@ namespace RobotView
             this.Controls.Add(this.switchView1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "ConsoleView";
-            this.Size = new System.Drawing.Size(166, 61);
+            this.Size = new System.Drawing.Size(263, 126);
             this.ResumeLayout(false);
 
 	}
