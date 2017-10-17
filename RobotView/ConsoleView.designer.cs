@@ -27,10 +27,21 @@ namespace RobotView
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.ledView = new LedView();
+            this.SuspendLayout();
+            // 
+            // ConsoleView
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.Controls.Add(this.ledView);
+            this.Name = "ConsoleView";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private LedView ledView;
     }
 }
