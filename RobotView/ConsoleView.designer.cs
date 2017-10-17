@@ -100,7 +100,6 @@ namespace RobotView
             this.label2.Size = new System.Drawing.Size(20, 20);
             this.label2.Text = "2";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label2.ParentChanged += new System.EventHandler(this.label2_ParentChanged);
             // 
             // label3
             // 

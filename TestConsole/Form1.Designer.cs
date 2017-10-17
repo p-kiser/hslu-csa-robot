@@ -43,7 +43,6 @@ namespace TestConsole
             this.consoleView.Name = "consoleView";
             this.consoleView.Size = new System.Drawing.Size(184, 68);
             this.consoleView.TabIndex = 0;
-            this.consoleView.Click += new System.EventHandler(this.consoleView_Click_1);
             // 
             // Form1
             // 

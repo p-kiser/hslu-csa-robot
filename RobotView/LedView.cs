@@ -10,6 +10,8 @@ namespace RobotView
 {
     public partial class LedView : UserControl
     {
+
+        private bool state;
         public LedView()
         {
             InitializeComponent();
