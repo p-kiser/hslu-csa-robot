@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsoleView.cs">
+      <SubType>usercontrol</SubType>
+    </Compile>
+    <Compile Include="ConsoleView.designer.cs">
+      <DependentUpon>ConsoleView.cs</DependentUpon>
+    </Compile>
     <Compile Include="LedView.cs">
       <SubType>usercontrol</SubType>
     </Compile>
