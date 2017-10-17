@@ -19,5 +19,10 @@ namespace RobotView
             State = false;
             switchPictureBox.Image = Resource.SwitchOff;
         }
+
+        private void switchPictureBox_Click(object sender, EventArgs e)
+        {
+            switchPictureBox.Image = switchPictureBox.Image == Resource.SwitchOn ? Resource.SwitchOff : Resource.SwitchOn;
+        }
     }
 }
