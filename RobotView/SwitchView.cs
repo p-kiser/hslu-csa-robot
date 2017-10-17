@@ -11,7 +11,6 @@ namespace RobotView
     public partial class SwitchView : UserControl
     {
         private bool State { get; set; }
-        
 
         public SwitchView()
         {

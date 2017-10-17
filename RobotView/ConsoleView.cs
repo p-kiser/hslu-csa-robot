@@ -8,14 +8,14 @@ using System.Windows.Forms;
 
 namespace RobotView
 {
-    public partial class LedView : UserControl
-    {
-        public LedView()
-        {
-            InitializeComponent();
-        }
+	public partial class ConsoleView: UserControl
+	{
+		public ConsoleView()
+		{
+			InitializeComponent();
+		}
 
-        private void ledPictureBox_Click(object sender, EventArgs e)
+        private void label2_ParentChanged(object sender, EventArgs e)
         {
 
         }

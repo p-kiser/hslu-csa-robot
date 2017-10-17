@@ -37,7 +37,7 @@ namespace RobotView
             this.switchPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("switchPictureBox.Image")));
             this.switchPictureBox.Location = new System.Drawing.Point(0, 0);
             this.switchPictureBox.Name = "switchPictureBox";
-            this.switchPictureBox.Size = new System.Drawing.Size(150, 150);
+            this.switchPictureBox.Size = new System.Drawing.Size(20, 40);
             // 
             // SwitchView
             // 
@@ -45,6 +45,7 @@ namespace RobotView
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.switchPictureBox);
             this.Name = "SwitchView";
+            this.Size = new System.Drawing.Size(20, 40);
             this.ResumeLayout(false);
 
         }
