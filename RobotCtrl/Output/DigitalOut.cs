@@ -19,6 +19,7 @@ namespace RobotCtrl
     {
 
         #region members
+        private Object lockPortAccess = new Object();
         private int data;
         public event EventHandler DigitalOutputChanged;
         #endregion
@@ -54,8 +55,16 @@ namespace RobotCtrl
         {
             get { return data; }
             set 
-            { 
-                // Todo 
+            {
+                /**
+                 * Update data on active port
+                 * Use syncronized so values wont change between read and write
+                 */
+                if(IOPort.Read(Port) != value)
+                {
+                    IOPort.Write(Port, value);
+                    DigitalOutputChanged(this, new EventArgs());
+                }
             }
         }
         #endregion

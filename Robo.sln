@@ -16,6 +16,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{A3EFA333-9A32-4D0B-8012-5893FF3C5342}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMotor", "TestMotor\TestMotor.csproj", "{67DA27A3-43C3-4913-ACBC-F63C49644FF4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CF427539-9A22-434B-A8E7-7AA40CE33964} = {CF427539-9A22-434B-A8E7-7AA40CE33964}
+		{F3E3E67A-7711-44AF-AFAF-61F59A70CAAC} = {F3E3E67A-7711-44AF-AFAF-61F59A70CAAC}
+		{13B42BB0-1A98-4544-B7BC-181CC81D9646} = {13B42BB0-1A98-4544-B7BC-181CC81D9646}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

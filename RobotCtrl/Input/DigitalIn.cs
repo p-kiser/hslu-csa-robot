@@ -111,7 +111,7 @@ namespace RobotCtrl
             {
                 // Todo: Port des Roboters pollen.
                 // Falls eine Änderung detektiert wird, das Event DigitalInChanged feuern.
-
+                
 
                 Thread.Sleep(50);
             }
