@@ -6,11 +6,8 @@
 //------------------------------------------------------------------------------
 #define USE_EXTERNAL_DLL
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Text;
 using System.Windows.Forms;
 
 namespace RobotCtrl
@@ -21,7 +18,6 @@ namespace RobotCtrl
     /// </summary>
 	public static class IOPort
     {
-
 #if USE_EXTERNAL_DLL
 
         #region members

@@ -35,18 +35,16 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="system.windows.forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contants.cs" />
-    <Compile Include="Input\DigitalIn.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="Input\DigitalIn.cs" />
     <Compile Include="Input\Switch.cs" />
-    <Compile Include="Input\Switch.cs" />
-    <Compile Include="Input\SwitchEventArgs.cs" />
     <Compile Include="Input\SwitchEventArgs.cs" />
     <Compile Include="IOPort.cs" />
     <Compile Include="Output\DigitalOut.cs" />
