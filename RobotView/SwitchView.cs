@@ -5,24 +5,56 @@ using System.Drawing;
 using System.Data;
 using System.Text;
 using System.Windows.Forms;
+using RobotCtrl;
 
 namespace RobotView
 {
     public partial class SwitchView : UserControl
     {
-        private bool State { get; set; }
-        
+
+        private bool state;
+        private Switch switchCtrl;
+
 
         public SwitchView()
         {
             InitializeComponent();
-            State = false;
-            switchPictureBox.Image = Resource.SwitchOff;
+            state = false;
         }
 
-        private void switchPictureBox_Click(object sender, EventArgs e)
+
+        public bool State
         {
-            switchPictureBox.Image = switchPictureBox.Image == Resource.SwitchOn ? Resource.SwitchOff : Resource.SwitchOn;
+            get { return state; }
+            set
+            {
+                state = value;
+                switchPictureBox.Image = value ? Resource.SwitchOn : Resource.SwitchOff;
+            }
+        }
+
+        public Switch SwitchCtrl
+        {
+            set
+            {
+                switchCtrl = value;
+                switchCtrl.SwitchStateChanged += SwitchCtrl_SwitchStateChanged;
+            }
+        }
+
+        private void SwitchCtrl_SwitchStateChanged(object sender, SwitchEventArgs e)
+        {
+            this.state = e.SwitchEnabled;
+        }
+
+        private void updateView()
+        {
+            this.switchPictureBox.Image = this.state ? Resource.SwitchOn : Resource.SwitchOff;
+        }
+
+    private void switchPictureBox_Click(object sender, EventArgs e)
+        {
+            //switchPictureBox.Image = switchPictureBox.Image == Resource.SwitchOn ? Resource.SwitchOff : Resource.SwitchOn;
         }
     }
 }

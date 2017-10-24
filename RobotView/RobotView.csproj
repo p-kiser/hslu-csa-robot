@@ -107,6 +107,12 @@
     <Content Include="resources\SwitchOff.bmp" />
     <Content Include="resources\SwitchOn.bmp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RobotCtrl\RobotCtrl.csproj">
+      <Project>{CF427539-9A22-434B-A8E7-7AA40CE33964}</Project>
+      <Name>RobotCtrl</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkTargetsVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
