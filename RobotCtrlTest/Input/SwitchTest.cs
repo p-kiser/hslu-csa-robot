@@ -35,7 +35,7 @@ namespace RobotCtrlTest.Input
         }
 
         [TestMethod]
-        public void TestsSimpleEventCall()
+        public void TestSimpleEventCall()
         {
             Assert.AreEqual(0, eventSwi1Dispatched);
             swi1.OnSwitchStateChanged(new SwitchEventArgs(Switches.Switch1, true));
@@ -62,7 +62,7 @@ namespace RobotCtrlTest.Input
             Assert.AreEqual(0, eventSwi2Dispatched);
         }
 
-        public void testChangeOnceBothAndOneTwiceSwitch()
+        public void TestChangeOnceBothAndOneTwiceSwitch()
         {
             // raise event and value for switch one have changed
             diMock.Setup(m => m[(int)Switches.Switch1]).Returns(true);

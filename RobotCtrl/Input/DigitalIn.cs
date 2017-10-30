@@ -68,7 +68,15 @@ namespace RobotCtrl
         /// </summary>
         public virtual int Data
         {
-            get { return 0xff; /* ToDo */}
+            get {
+                // could be a problem, when multible
+                // threads try to access the port and
+                // the data changes during the process
+                lock (this)
+                {
+                    return IOPort.Read(Port);
+                }
+            }
         }
         #endregion
 
@@ -95,7 +103,7 @@ namespace RobotCtrl
         public virtual bool this[int bit]
         {
             get {
-                return true; // (Data & (1 << bit)) > 0;
+                return (Data & (1 << bit)) > 0;
             }
         }
 
@@ -110,8 +118,12 @@ namespace RobotCtrl
             run = true;
             while (run)
             {
-                // Todo: Port des Roboters pollen.
-                // Falls eine Änderung detektiert wird, das Event DigitalInChanged feuern.
+                newData = Data;
+                if(newData != oldData && DigitalInChanged != null)
+                {
+                    oldData = newData;
+                    DigitalInChanged(this, new EventArgs());
+                }
 
                 Thread.Sleep(50);
             }
