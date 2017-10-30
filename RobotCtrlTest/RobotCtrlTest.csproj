@@ -64,6 +64,7 @@
     <Compile Include="Input\DigitalInTest.cs" />
     <Compile Include="Input\SwitchTest.cs" />
     <Compile Include="Output\DigitalOutTest.cs" />
+    <Compile Include="Output\LedTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
