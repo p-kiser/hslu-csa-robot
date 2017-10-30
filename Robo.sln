@@ -22,6 +22,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMotor", "TestMotor\Test
 		{13B42BB0-1A98-4544-B7BC-181CC81D9646} = {13B42BB0-1A98-4544-B7BC-181CC81D9646}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotViewTest", "RobotViewTest\RobotViewTest.csproj", "{D5158214-2FAE-469D-838C-225C5A74F96E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CF427539-9A22-434B-A8E7-7AA40CE33964} = {CF427539-9A22-434B-A8E7-7AA40CE33964}
+		{F3E3E67A-7711-44AF-AFAF-61F59A70CAAC} = {F3E3E67A-7711-44AF-AFAF-61F59A70CAAC}
+		{13B42BB0-1A98-4544-B7BC-181CC81D9646} = {13B42BB0-1A98-4544-B7BC-181CC81D9646}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,6 +73,10 @@ Global
 		{67DA27A3-43C3-4913-ACBC-F63C49644FF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67DA27A3-43C3-4913-ACBC-F63C49644FF4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{67DA27A3-43C3-4913-ACBC-F63C49644FF4}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{D5158214-2FAE-469D-838C-225C5A74F96E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5158214-2FAE-469D-838C-225C5A74F96E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5158214-2FAE-469D-838C-225C5A74F96E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5158214-2FAE-469D-838C-225C5A74F96E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

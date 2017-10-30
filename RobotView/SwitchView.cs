@@ -42,10 +42,19 @@ namespace RobotView
             }
         }
 
+        /// <summary>
+        /// Update switch state if sender is own set
+        /// switch.
+        /// </summary>
+        /// <param name="sender">The switch from where the change is from</param>
+        /// <param name="e">Event</param>
         private void SwitchCtrl_SwitchStateChanged(object sender, SwitchEventArgs e)
         {
-            this.state = e.SwitchEnabled;
-            updateView();
+            if(sender == switchCtrl)
+            {
+                this.state = e.SwitchEnabled;
+                updateView();
+            }
         }
 
         private void updateView()

@@ -52,6 +52,12 @@ namespace RobotCtrl
             this.oldState = false;
             this.digitalIn.DigitalInChanged += new EventHandler(DigitalInChanged);
         }
+
+        /// <summary>
+        /// Parameterless constructor for moq
+        /// </summary>
+        public Switch() { }
+ 
         #endregion
 
 
