@@ -52,6 +52,11 @@ namespace RobotCtrl
             this.oldState = false;
             this.digitalOut.DigitalOutputChanged += new EventHandler(DigitalOutputChanged);
         }
+
+        /// <summary>
+        /// Empty constructor for mocking
+        /// </summary>
+        public Led() { }
         #endregion
 
 

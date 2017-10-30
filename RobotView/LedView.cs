@@ -27,8 +27,7 @@ namespace RobotView
             get { return state; }
             set
             {
-                state = value;
-                ledPictureBox.Image = value ? Resource.LedOn : Resource.LedOff;
+                updateView(state = value);
             }
         }
 
@@ -47,9 +46,13 @@ namespace RobotView
             this.state = e.LedEnabled;
         }
 
+        private void updateView(bool state)
+        {
+            this.ledPictureBox.Image = state ? Resource.LedOn : Resource.LedOff;
+        }
         private void updateView()
         {
-            this.ledPictureBox.Image = this.state ? Resource.LedOn : Resource.LedOff;
+            updateView(this.state);
         }
 
         private void ledPictureBox_Click(object sender, EventArgs e)
