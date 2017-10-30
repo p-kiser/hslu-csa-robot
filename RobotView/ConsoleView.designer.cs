@@ -37,6 +37,8 @@ namespace RobotView
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.switchView3 = new RobotView.SwitchView();
+            this.switchView4 = new RobotView.SwitchView();
             this.SuspendLayout();
             // 
             // switchView1
@@ -125,11 +127,27 @@ namespace RobotView
             this.label4.Text = "4";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // switchView3
+            // 
+            this.switchView3.Location = new System.Drawing.Point(209, 41);
+            this.switchView3.Name = "switchView3";
+            this.switchView3.Size = new System.Drawing.Size(20, 40);
+            this.switchView3.TabIndex = 6;
+            // 
+            // switchView4
+            // 
+            this.switchView4.Location = new System.Drawing.Point(235, 41);
+            this.switchView4.Name = "switchView4";
+            this.switchView4.Size = new System.Drawing.Size(20, 40);
+            this.switchView4.TabIndex = 7;
+            // 
             // ConsoleView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Controls.Add(this.switchView4);
+            this.Controls.Add(this.switchView3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -142,7 +160,7 @@ namespace RobotView
             this.Controls.Add(this.switchView1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "ConsoleView";
-            this.Size = new System.Drawing.Size(263, 126);
+            this.Size = new System.Drawing.Size(324, 126);
             this.ResumeLayout(false);
 
 	}
@@ -158,5 +176,7 @@ namespace RobotView
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private SwitchView switchView3;
+        private SwitchView switchView4;
     }
 }
