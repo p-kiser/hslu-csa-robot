@@ -45,6 +45,7 @@ namespace RobotView
         private void SwitchCtrl_SwitchStateChanged(object sender, SwitchEventArgs e)
         {
             this.state = e.SwitchEnabled;
+            updateView();
         }
 
         private void updateView()
