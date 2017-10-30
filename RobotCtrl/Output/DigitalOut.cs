@@ -34,7 +34,7 @@ namespace RobotCtrl
         public DigitalOut(int port)
         {
             Port = port;
-            data = 0;
+            Data = data = 0;
         }
         #endregion
 
@@ -53,17 +53,30 @@ namespace RobotCtrl
         /// </summary>
         public int Data
         {
-            get { return data; }
+            get {
+                lock(this)
+                {
+                    return data;
+                }
+            }
             set 
             {
                 /**
                  * Update data on active port
                  * Use syncronized so values wont change between read and write
                  */
-                if(IOPort.Read(Port) != value)
+                lock(this)
                 {
-                    IOPort.Write(Port, value);
-                    DigitalOutputChanged(this, new EventArgs());
+                    if (IOPort.Read(Port) != value)
+                    {
+                        IOPort.Write(Port, value);
+                    }
+                }
+
+                if (data != value)
+                {
+                    data = value;
+                    DigitalOutputChanged?.Invoke(this, new EventArgs());
                 }
             }
         }
@@ -92,8 +105,19 @@ namespace RobotCtrl
         /// <returns>den aktuellen Zustand des Bits</returns>
         public virtual bool this[int bit]
         {
-            get { return false; /* ToDo */  }
-            set { /* ToDo */ }
+            get {
+                return  ((1 << bit) & Data) > 0;
+            }
+            set {
+                if(value)
+                {
+                    Data |= (1 << bit);
+                }
+                else
+                {
+                    Data &= ~(1 << bit);
+                }
+            }
         }
         #endregion
     }
