@@ -51,7 +51,7 @@ namespace RobotCtrl
         /// </summary>
         /// <param name="port">die gewünschte Port-Adresse (16 Bit)</param>
         /// <param name="data">das gewünschte Datenbyte</param>
-        public static void Write(int port, byte data)
+        public static void Write(int port, int data)
         {
             writeMethod.Invoke(null, new object[] { port, data });
         }
@@ -62,7 +62,7 @@ namespace RobotCtrl
         /// </summary>
         /// <param name="port">die gewünschte Port-Adresse (16 Bit)</param>
         /// <returns>das gelesene Byte</returns>
-        public static byte Read(int port)
+        public static int Read(int port)
         {
             return (byte)readMethod.Invoke(null, new object[] { port });
         }
