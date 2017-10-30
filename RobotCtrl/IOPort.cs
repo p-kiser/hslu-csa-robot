@@ -12,11 +12,74 @@ using System.Windows.Forms;
 
 namespace RobotCtrl
 {
+    /// <summary>
+    /// Class to make the static IOPort class
+    /// mockable for easier testing. Only use this class
+    /// to access the IOPorts to help in debugging and
+    /// unittesting. It is recommended to refactor the IOPort class later.
+    /// </summary>
+    public class IOPort
+    {
+        protected static IOPort instance;
+
+        static IOPort()
+        {
+            instance = new IOPort();
+        }
+
+        /// <summary>
+        /// Change IOPort instance for mocking or service change
+        /// </summary>
+        /// <param name="singelton"></param>
+        public static void set(IOPort singelton)
+        {
+            IOPort.instance = singelton;
+        }
+
+        /// <summary>
+        /// mockable write function
+        /// </summary>
+        /// <param name="port">die gewünschte Port-Adresse (16 Bit)</param>
+        /// <param name="data">das gewünschte Datenbyte</param>
+        public virtual void _write(int port, int data)
+        {
+            IOPortFactory.Write(port, data);
+        }
+
+        /// <summary>
+        /// Schreibt ein Byte auf eine Port-Adresse
+        /// </summary>
+        /// <param name="port">die gewünschte Port-Adresse (16 Bit)</param>
+        /// <param name="data">das gewünschte Datenbyte</param>
+        public static void Write(int port, int data)
+        {
+            instance._write(port, data);
+        }
+
+        /// <summary>
+        /// mockable read function
+        /// </summary>
+        /// <param name="port"></param>
+        public virtual int _read(int port)
+        {
+            return IOPortFactory.Read(port);
+        }
+
+        /// <summary>
+        /// Liest ein Byte von einer Port-Adresse
+        /// </summary>
+        /// <param name="port">die gewünschte Port-Adresse (16 Bit)</param>
+        /// <returns>das gelesene Byte</returns>
+        public static int Read(int port)
+        {
+            return instance._read(port);
+        }
+    }
 
     /// <summary>
     /// Klasse für den Hardware-Zugriff auf den Roboter.
     /// </summary>
-	public static class IOPort
+	public static class IOPortFactory
     {
 #if USE_EXTERNAL_DLL
 
@@ -27,7 +90,7 @@ namespace RobotCtrl
 
 
         #region constructor & destructor
-        static IOPort()
+        static IOPortFactory()
         {
             try
             {
