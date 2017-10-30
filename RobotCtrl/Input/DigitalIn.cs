@@ -12,7 +12,6 @@ using System.Threading;
 
 namespace RobotCtrl
 {
-
     /// <summary>
     /// Mit Hilfe diese Klasse kann auf die 4 Eingänge (Schalter) des Roboters zugegeriffen werden.
     /// </summary>
@@ -22,7 +21,7 @@ namespace RobotCtrl
         private Thread thread;
         private bool disposed;
         private bool run;
-        public event EventHandler DigitalInChanged;
+        public virtual event EventHandler DigitalInChanged;
         #endregion
 
 
@@ -67,9 +66,9 @@ namespace RobotCtrl
         /// <summary>
         /// Liest Daten vom IO-Port. Es können keine Daten geschrieben werden!
         /// </summary>
-        public int Data
+        public virtual int Data
         {
-            get { return 0; /* ToDo */}
+            get { return 0xff; /* ToDo */}
         }
         #endregion
 
@@ -95,7 +94,9 @@ namespace RobotCtrl
         /// <returns>den Zustand des entsprechenden Input-Bits.</returns>
         public virtual bool this[int bit]
         {
-            get { return false; /* ToDo */ }
+            get {
+                return true; // (Data & (1 << bit)) > 0;
+            }
         }
 
         /// <summary>
@@ -111,7 +112,6 @@ namespace RobotCtrl
             {
                 // Todo: Port des Roboters pollen.
                 // Falls eine Änderung detektiert wird, das Event DigitalInChanged feuern.
-                
 
                 Thread.Sleep(50);
             }

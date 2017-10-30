@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotViewTest", "RobotViewT
 		{13B42BB0-1A98-4544-B7BC-181CC81D9646} = {13B42BB0-1A98-4544-B7BC-181CC81D9646}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotCtrlTest", "RobotCtrlTest\RobotCtrlTest.csproj", "{6AB98ACF-3BB8-44CC-8069-F2BABC5BB0F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{D5158214-2FAE-469D-838C-225C5A74F96E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5158214-2FAE-469D-838C-225C5A74F96E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5158214-2FAE-469D-838C-225C5A74F96E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AB98ACF-3BB8-44CC-8069-F2BABC5BB0F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AB98ACF-3BB8-44CC-8069-F2BABC5BB0F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AB98ACF-3BB8-44CC-8069-F2BABC5BB0F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AB98ACF-3BB8-44CC-8069-F2BABC5BB0F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

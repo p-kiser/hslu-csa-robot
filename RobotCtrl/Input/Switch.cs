@@ -39,6 +39,7 @@ namespace RobotCtrl
         #endregion
 
 
+
         #region constructor & destructor
         /// <summary>
         /// Initialisiert den Schalter.
@@ -103,6 +104,5 @@ namespace RobotCtrl
             }
         }
         #endregion
-
     }
 }
