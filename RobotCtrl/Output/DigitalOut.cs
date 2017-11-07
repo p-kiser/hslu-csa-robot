@@ -34,7 +34,7 @@ namespace RobotCtrl
         public DigitalOut(int port)
         {
             Port = port;
-            Data = data = 0;
+            Data = 0;
         }
         #endregion
 
@@ -61,21 +61,23 @@ namespace RobotCtrl
             }
             set 
             {
+                bool changed = false;
                 /**
                  * Update data on active port
                  * Use syncronized so values wont change between read and write
                  */
-                lock(this)
+                lock (this)
                 {
-                    if (IOPort.Read(Port) != value)
+                    if (data != value)
                     {
                         IOPort.Write(Port, value);
+                        data = value;
+                        changed = true;
                     }
                 }
-
-                if (data != value)
+                
+                if (changed)
                 {
-                    data = value;
                     DigitalOutputChanged?.Invoke(this, new EventArgs());
                 }
             }

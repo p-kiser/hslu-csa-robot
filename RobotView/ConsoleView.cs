@@ -29,6 +29,11 @@ namespace RobotView
                 switchView2.SwitchCtrl = value[Switches.Switch2];
                 switchView3.SwitchCtrl = value[Switches.Switch3];
                 switchView4.SwitchCtrl = value[Switches.Switch4];
+
+                appendAction(value[Switches.Switch1], value[Leds.Led1]);
+                appendAction(value[Switches.Switch2], value[Leds.Led2]);
+                appendAction(value[Switches.Switch3], value[Leds.Led3]);
+                appendAction(value[Switches.Switch4], value[Leds.Led4]);
             }
         }
 

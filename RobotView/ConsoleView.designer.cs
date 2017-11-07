@@ -107,7 +107,7 @@ namespace RobotView
             // 
             // ledView3
             // 
-            this.ledView3.Location = new System.Drawing.Point(79, 40);
+            this.ledView3.Location = new System.Drawing.Point(110, 41);
             this.ledView3.Name = "ledView3";
             this.ledView3.Size = new System.Drawing.Size(34, 31);
             this.ledView3.State = false;
@@ -115,7 +115,7 @@ namespace RobotView
             // 
             // ledView2
             // 
-            this.ledView2.Location = new System.Drawing.Point(114, 41);
+            this.ledView2.Location = new System.Drawing.Point(70, 41);
             this.ledView2.Name = "ledView2";
             this.ledView2.Size = new System.Drawing.Size(34, 31);
             this.ledView2.State = false;
@@ -131,7 +131,7 @@ namespace RobotView
             // 
             // ledView1
             // 
-            this.ledView1.Location = new System.Drawing.Point(38, 41);
+            this.ledView1.Location = new System.Drawing.Point(30, 41);
             this.ledView1.Name = "ledView1";
             this.ledView1.Size = new System.Drawing.Size(34, 31);
             this.ledView1.State = false;

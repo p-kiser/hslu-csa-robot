@@ -35,7 +35,6 @@ namespace RobotView
         {
             set
             {
-                
                 ledCtrl = value;
                 ledCtrl.LedStateChanged += LedCtrl_LedStateChanged;                
             }
@@ -43,7 +42,7 @@ namespace RobotView
 
         private void LedCtrl_LedStateChanged(object sender, LedEventArgs e)
         {
-            this.state = e.LedEnabled;
+            this.State = e.LedEnabled;
         }
 
         private void updateView(bool state)
