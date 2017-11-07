@@ -27,73 +27,27 @@ namespace RobotView
         /// </summary>
         private void InitializeComponent()
         {
-            this.switchView1 = new RobotView.SwitchView();
-            this.ledView1 = new RobotView.LedView();
-            this.switchView2 = new RobotView.SwitchView();
-            this.ledView2 = new RobotView.LedView();
-            this.ledView3 = new RobotView.LedView();
-            this.ledView4 = new RobotView.LedView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.switchView3 = new RobotView.SwitchView();
             this.switchView4 = new RobotView.SwitchView();
+            this.switchView3 = new RobotView.SwitchView();
+            this.ledView4 = new RobotView.LedView();
+            this.ledView3 = new RobotView.LedView();
+            this.ledView2 = new RobotView.LedView();
+            this.switchView2 = new RobotView.SwitchView();
+            this.ledView1 = new RobotView.LedView();
+            this.switchView1 = new RobotView.SwitchView();
             this.SuspendLayout();
-            // 
-            // switchView1
-            // 
-            this.switchView1.Location = new System.Drawing.Point(157, 41);
-            this.switchView1.Name = "switchView1";
-            this.switchView1.Size = new System.Drawing.Size(20, 40);
-            this.switchView1.TabIndex = 1;
-            // 
-            // ledView1
-            // 
-            this.ledView1.Location = new System.Drawing.Point(53, 41);
-            this.ledView1.Name = "ledView1";
-            this.ledView1.Size = new System.Drawing.Size(20, 20);
-            this.ledView1.State = false;
-            this.ledView1.TabIndex = 0;
-            // 
-            // switchView2
-            // 
-            this.switchView2.Location = new System.Drawing.Point(183, 41);
-            this.switchView2.Name = "switchView2";
-            this.switchView2.Size = new System.Drawing.Size(20, 40);
-            this.switchView2.TabIndex = 2;
-            // 
-            // ledView2
-            // 
-            this.ledView2.Location = new System.Drawing.Point(105, 41);
-            this.ledView2.Name = "ledView2";
-            this.ledView2.Size = new System.Drawing.Size(20, 20);
-            this.ledView2.State = false;
-            this.ledView2.TabIndex = 3;
-            // 
-            // ledView3
-            // 
-            this.ledView3.Location = new System.Drawing.Point(79, 41);
-            this.ledView3.Name = "ledView3";
-            this.ledView3.Size = new System.Drawing.Size(20, 20);
-            this.ledView3.State = false;
-            this.ledView3.TabIndex = 4;
-            // 
-            // ledView4
-            // 
-            this.ledView4.Location = new System.Drawing.Point(131, 41);
-            this.ledView4.Name = "ledView4";
-            this.ledView4.Size = new System.Drawing.Size(20, 20);
-            this.ledView4.State = false;
-            this.ledView4.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(56, 64);
+            this.label1.Location = new System.Drawing.Point(38, 75);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 20);
+            this.label1.Size = new System.Drawing.Size(17, 42);
             this.label1.Text = "1";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -101,9 +55,9 @@ namespace RobotView
             // 
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(79, 63);
+            this.label2.Location = new System.Drawing.Point(79, 74);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 20);
+            this.label2.Size = new System.Drawing.Size(20, 43);
             this.label2.Text = "2";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -111,9 +65,9 @@ namespace RobotView
             // 
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(105, 63);
+            this.label3.Location = new System.Drawing.Point(114, 75);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(20, 20);
+            this.label3.Size = new System.Drawing.Size(20, 43);
             this.label3.Text = "3";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -121,25 +75,75 @@ namespace RobotView
             // 
             this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(131, 63);
+            this.label4.Location = new System.Drawing.Point(150, 74);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(20, 20);
+            this.label4.Size = new System.Drawing.Size(20, 43);
             this.label4.Text = "4";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // switchView3
-            // 
-            this.switchView3.Location = new System.Drawing.Point(209, 41);
-            this.switchView3.Name = "switchView3";
-            this.switchView3.Size = new System.Drawing.Size(20, 40);
-            this.switchView3.TabIndex = 6;
-            // 
             // switchView4
             // 
-            this.switchView4.Location = new System.Drawing.Point(235, 41);
+            this.switchView4.Location = new System.Drawing.Point(269, 41);
             this.switchView4.Name = "switchView4";
-            this.switchView4.Size = new System.Drawing.Size(20, 40);
+            this.switchView4.Size = new System.Drawing.Size(20, 65);
+            this.switchView4.State = false;
             this.switchView4.TabIndex = 7;
+            // 
+            // switchView3
+            // 
+            this.switchView3.Location = new System.Drawing.Point(243, 41);
+            this.switchView3.Name = "switchView3";
+            this.switchView3.Size = new System.Drawing.Size(20, 65);
+            this.switchView3.State = false;
+            this.switchView3.TabIndex = 6;
+            // 
+            // ledView4
+            // 
+            this.ledView4.Location = new System.Drawing.Point(150, 41);
+            this.ledView4.Name = "ledView4";
+            this.ledView4.Size = new System.Drawing.Size(34, 31);
+            this.ledView4.State = false;
+            this.ledView4.TabIndex = 5;
+            // 
+            // ledView3
+            // 
+            this.ledView3.Location = new System.Drawing.Point(79, 40);
+            this.ledView3.Name = "ledView3";
+            this.ledView3.Size = new System.Drawing.Size(34, 31);
+            this.ledView3.State = false;
+            this.ledView3.TabIndex = 4;
+            // 
+            // ledView2
+            // 
+            this.ledView2.Location = new System.Drawing.Point(114, 41);
+            this.ledView2.Name = "ledView2";
+            this.ledView2.Size = new System.Drawing.Size(34, 31);
+            this.ledView2.State = false;
+            this.ledView2.TabIndex = 3;
+            // 
+            // switchView2
+            // 
+            this.switchView2.Location = new System.Drawing.Point(217, 41);
+            this.switchView2.Name = "switchView2";
+            this.switchView2.Size = new System.Drawing.Size(20, 65);
+            this.switchView2.State = false;
+            this.switchView2.TabIndex = 2;
+            // 
+            // ledView1
+            // 
+            this.ledView1.Location = new System.Drawing.Point(38, 41);
+            this.ledView1.Name = "ledView1";
+            this.ledView1.Size = new System.Drawing.Size(34, 31);
+            this.ledView1.State = false;
+            this.ledView1.TabIndex = 0;
+            // 
+            // switchView1
+            // 
+            this.switchView1.Location = new System.Drawing.Point(191, 41);
+            this.switchView1.Name = "switchView1";
+            this.switchView1.Size = new System.Drawing.Size(20, 65);
+            this.switchView1.State = false;
+            this.switchView1.TabIndex = 1;
             // 
             // ConsoleView
             // 

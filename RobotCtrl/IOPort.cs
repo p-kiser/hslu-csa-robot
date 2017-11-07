@@ -127,7 +127,7 @@ namespace RobotCtrl
         /// <returns>das gelesene Byte</returns>
         public static int Read(int port)
         {
-            return (byte)readMethod.Invoke(null, new object[] { port });
+            return (int)readMethod.Invoke(null, new object[] { port });
         }
         #endregion
 

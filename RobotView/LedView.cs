@@ -35,7 +35,7 @@ namespace RobotView
         {
             set
             {
-
+                
                 ledCtrl = value;
                 ledCtrl.LedStateChanged += LedCtrl_LedStateChanged;                
             }
@@ -48,7 +48,10 @@ namespace RobotView
 
         private void updateView(bool state)
         {
-            this.ledPictureBox.Image = state ? Resource.LedOn : Resource.LedOff;
+            this.Invoke(new Action(() =>
+            {
+                this.ledPictureBox.Image = state ? Resource.LedOn : Resource.LedOff;
+            }));
         }
         private void updateView()
         {

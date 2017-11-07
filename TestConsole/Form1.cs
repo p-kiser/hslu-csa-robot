@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using RobotCtrl;
+
 namespace TestConsole
 {
     public partial class Form1 : Form
@@ -14,6 +16,7 @@ namespace TestConsole
         public Form1()
         {
             InitializeComponent();
+            consoleView.robotConsole = new RobotConsole();
         }
 
         private void consoleView_Click(object sender, EventArgs e)

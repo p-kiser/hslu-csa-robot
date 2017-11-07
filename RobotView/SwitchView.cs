@@ -40,6 +40,11 @@ namespace RobotView
                 switchCtrl = value;
                 switchCtrl.SwitchStateChanged += SwitchCtrl_SwitchStateChanged;
             }
+
+            get
+            {
+                return switchCtrl;
+            }
         }
 
         /// <summary>
@@ -59,10 +64,12 @@ namespace RobotView
 
         private void updateView()
         {
-            this.switchPictureBox.Image = this.state ? Resource.SwitchOn : Resource.SwitchOff;
+            this.Invoke(new Action(() => {
+                this.switchPictureBox.Image = this.state ? Resource.SwitchOn : Resource.SwitchOff;
+            }));
         }
 
-    private void switchPictureBox_Click(object sender, EventArgs e)
+        private void switchPictureBox_Click(object sender, EventArgs e)
         {
             //switchPictureBox.Image = switchPictureBox.Image == Resource.SwitchOn ? Resource.SwitchOff : Resource.SwitchOn;
         }
