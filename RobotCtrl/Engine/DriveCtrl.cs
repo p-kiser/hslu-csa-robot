@@ -84,7 +84,12 @@ namespace RobotCtrl
         /// </summary>
         public void Reset()
         {
-            // ToDo
+            // DriveStatusCtrl = 0x00;
+            Thread.Sleep(5);
+            // DriveStatusCtrl = 0x80;
+            Thread.Sleep(5);
+            // DriveStatusCtrl = 0x00;
+            Thread.Sleep(5);
         }
         #endregion
 

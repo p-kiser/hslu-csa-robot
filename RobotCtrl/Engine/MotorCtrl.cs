@@ -159,7 +159,7 @@ namespace RobotCtrl
         public virtual float Distance
         {
             get {
-                throw new NotImplementedException("ToDo");
+                return Ticks * Constants.MeterPerTick;
             }
         }
 
