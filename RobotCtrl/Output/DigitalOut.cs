@@ -54,7 +54,7 @@ namespace RobotCtrl
         public int Data
         {
             get {
-                lock(this)
+                lock(lockPortAccess)
                 {
                     return data;
                 }
@@ -66,7 +66,7 @@ namespace RobotCtrl
                  * Update data on active port
                  * Use syncronized so values wont change between read and write
                  */
-                lock (this)
+                lock (lockPortAccess)
                 {
                     if (data != value)
                     {
