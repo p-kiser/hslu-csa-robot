@@ -56,7 +56,7 @@ namespace RobotCtrl
             this.driveCtrl = new DriveCtrl(Constants.IODriveCtrl);
             this.motorCtrlLeft = new MotorCtrl(Constants.IOMotorCtrlLeft);
             this.motorCtrlRight = new MotorCtrl(Constants.IOMotorCtrlRight);
-
+            
             // Beschleunigung festlegen
             this.motorCtrlLeft.Acceleration = 10f;
             this.motorCtrlRight.Acceleration = 10f;

@@ -14,6 +14,8 @@ namespace TestTracks
         public Form1()
         {
             InitializeComponent();
+            runTurn.Drive = new RobotCtrl.Drive();
+            runTurn.Drive.Power = true;
         }
     }
 }
