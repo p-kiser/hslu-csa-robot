@@ -99,10 +99,5 @@ namespace RobotView
             }
         }
         #endregion
-
-        private void MotorCtrlView_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
