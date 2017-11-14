@@ -55,12 +55,12 @@ namespace RobotView
 
         private void buttonResetMotorCtrl_Click(object sender, EventArgs e)
         {
-            if (MotorCtrl != null)
+/*            if (MotorCtrl != null)
             {
                 MotorCtrl.Reset();
                 Running = false;
             }
-        }
+*/        }
 
 
         private void timer_Tick(object sender, EventArgs e)
