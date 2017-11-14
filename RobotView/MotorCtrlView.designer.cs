@@ -52,7 +52,7 @@ namespace RobotView
             // 
             // labelCurrentSpeed
             // 
-            this.labelCurrentSpeed.Location = new System.Drawing.Point(338, 134);
+            this.labelCurrentSpeed.Location = new System.Drawing.Point(363, 158);
             this.labelCurrentSpeed.Name = "labelCurrentSpeed";
             this.labelCurrentSpeed.Size = new System.Drawing.Size(84, 20);
             this.labelCurrentSpeed.Text = "0.000 [m/s]";
@@ -60,7 +60,7 @@ namespace RobotView
             // 
             // buttonResetTicks
             // 
-            this.buttonResetTicks.Location = new System.Drawing.Point(260, 74);
+            this.buttonResetTicks.Location = new System.Drawing.Point(285, 98);
             this.buttonResetTicks.Name = "buttonResetTicks";
             this.buttonResetTicks.Size = new System.Drawing.Size(72, 33);
             this.buttonResetTicks.TabIndex = 69;
@@ -69,49 +69,49 @@ namespace RobotView
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(3, 0);
+            this.label6.Location = new System.Drawing.Point(28, 24);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(100, 20);
             this.label6.Text = "Reset MotorCtrl";
             // 
             // labelMotorStatus
             // 
-            this.labelMotorStatus.Location = new System.Drawing.Point(260, 30);
+            this.labelMotorStatus.Location = new System.Drawing.Point(285, 54);
             this.labelMotorStatus.Name = "labelMotorStatus";
             this.labelMotorStatus.Size = new System.Drawing.Size(72, 20);
             this.labelMotorStatus.Text = "stopped";
             // 
             // textBoxDriveCtrlMotorStatus
             // 
-            this.textBoxDriveCtrlMotorStatus.Location = new System.Drawing.Point(350, 27);
+            this.textBoxDriveCtrlMotorStatus.Location = new System.Drawing.Point(375, 51);
             this.textBoxDriveCtrlMotorStatus.Name = "textBoxDriveCtrlMotorStatus";
-            this.textBoxDriveCtrlMotorStatus.Size = new System.Drawing.Size(72, 39);
+            this.textBoxDriveCtrlMotorStatus.Size = new System.Drawing.Size(72, 23);
             this.textBoxDriveCtrlMotorStatus.TabIndex = 59;
             // 
             // label11
             // 
-            this.label11.Location = new System.Drawing.Point(0, 87);
+            this.label11.Location = new System.Drawing.Point(25, 111);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(123, 20);
             this.label11.Text = "Ticks";
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(3, 29);
+            this.label5.Location = new System.Drawing.Point(28, 53);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 20);
             this.label5.Text = "Motor status";
             // 
             // textBoxTicks
             // 
-            this.textBoxTicks.Location = new System.Drawing.Point(350, 85);
+            this.textBoxTicks.Location = new System.Drawing.Point(375, 109);
             this.textBoxTicks.Name = "textBoxTicks";
-            this.textBoxTicks.Size = new System.Drawing.Size(72, 39);
+            this.textBoxTicks.Size = new System.Drawing.Size(72, 23);
             this.textBoxTicks.TabIndex = 68;
             // 
             // buttonResetMotorCtrl
             // 
-            this.buttonResetMotorCtrl.Location = new System.Drawing.Point(350, 1);
+            this.buttonResetMotorCtrl.Location = new System.Drawing.Point(375, 25);
             this.buttonResetMotorCtrl.Name = "buttonResetMotorCtrl";
             this.buttonResetMotorCtrl.Size = new System.Drawing.Size(72, 20);
             this.buttonResetMotorCtrl.TabIndex = 60;
@@ -120,14 +120,14 @@ namespace RobotView
             // 
             // label10
             // 
-            this.label10.Location = new System.Drawing.Point(0, 58);
+            this.label10.Location = new System.Drawing.Point(25, 82);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(123, 20);
             this.label10.Text = "Distance [m]";
             // 
             // buttonMotorCtrlStop
             // 
-            this.buttonMotorCtrlStop.Location = new System.Drawing.Point(260, 121);
+            this.buttonMotorCtrlStop.Location = new System.Drawing.Point(285, 145);
             this.buttonMotorCtrlStop.Name = "buttonMotorCtrlStop";
             this.buttonMotorCtrlStop.Size = new System.Drawing.Size(72, 33);
             this.buttonMotorCtrlStop.TabIndex = 63;
@@ -136,14 +136,14 @@ namespace RobotView
             // 
             // textBoxDistance
             // 
-            this.textBoxDistance.Location = new System.Drawing.Point(350, 56);
+            this.textBoxDistance.Location = new System.Drawing.Point(375, 80);
             this.textBoxDistance.Name = "textBoxDistance";
-            this.textBoxDistance.Size = new System.Drawing.Size(72, 39);
+            this.textBoxDistance.Size = new System.Drawing.Size(72, 23);
             this.textBoxDistance.TabIndex = 67;
             // 
             // buttonMotorCtrlStart
             // 
-            this.buttonMotorCtrlStart.Location = new System.Drawing.Point(182, 121);
+            this.buttonMotorCtrlStart.Location = new System.Drawing.Point(207, 145);
             this.buttonMotorCtrlStart.Name = "buttonMotorCtrlStart";
             this.buttonMotorCtrlStart.Size = new System.Drawing.Size(72, 33);
             this.buttonMotorCtrlStart.TabIndex = 62;
@@ -152,35 +152,35 @@ namespace RobotView
             // 
             // textBoxMotorSpeed
             // 
-            this.textBoxMotorSpeed.Location = new System.Drawing.Point(350, 179);
+            this.textBoxMotorSpeed.Location = new System.Drawing.Point(375, 203);
             this.textBoxMotorSpeed.Name = "textBoxMotorSpeed";
-            this.textBoxMotorSpeed.Size = new System.Drawing.Size(72, 39);
+            this.textBoxMotorSpeed.Size = new System.Drawing.Size(72, 23);
             this.textBoxMotorSpeed.TabIndex = 66;
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(0, 133);
+            this.label7.Location = new System.Drawing.Point(25, 157);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(100, 20);
             this.label7.Text = "Motor control";
             // 
             // textBoxAcceleration
             // 
-            this.textBoxAcceleration.Location = new System.Drawing.Point(350, 219);
+            this.textBoxAcceleration.Location = new System.Drawing.Point(375, 243);
             this.textBoxAcceleration.Name = "textBoxAcceleration";
-            this.textBoxAcceleration.Size = new System.Drawing.Size(72, 39);
+            this.textBoxAcceleration.Size = new System.Drawing.Size(72, 23);
             this.textBoxAcceleration.TabIndex = 61;
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(0, 179);
+            this.label8.Location = new System.Drawing.Point(25, 203);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(123, 20);
             this.label8.Text = "Motor speed [m/s]";
             // 
             // trackBarAcceleration
             // 
-            this.trackBarAcceleration.Location = new System.Drawing.Point(131, 211);
+            this.trackBarAcceleration.Location = new System.Drawing.Point(156, 235);
             this.trackBarAcceleration.Maximum = 5000;
             this.trackBarAcceleration.Name = "trackBarAcceleration";
             this.trackBarAcceleration.Size = new System.Drawing.Size(213, 45);
@@ -190,7 +190,7 @@ namespace RobotView
             // 
             // trackBarMotorSpeed
             // 
-            this.trackBarMotorSpeed.Location = new System.Drawing.Point(131, 168);
+            this.trackBarMotorSpeed.Location = new System.Drawing.Point(156, 192);
             this.trackBarMotorSpeed.Maximum = 2000;
             this.trackBarMotorSpeed.Minimum = -2000;
             this.trackBarMotorSpeed.Name = "trackBarMotorSpeed";
@@ -201,7 +201,7 @@ namespace RobotView
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(0, 222);
+            this.label9.Location = new System.Drawing.Point(25, 246);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(140, 20);
             this.label9.Text = "Acceleration [m/s^2]";
@@ -235,7 +235,8 @@ namespace RobotView
             this.Controls.Add(this.trackBarMotorSpeed);
             this.Controls.Add(this.label9);
             this.Name = "MotorCtrlView";
-            this.Size = new System.Drawing.Size(431, 258);
+            this.Size = new System.Drawing.Size(482, 306);
+            this.Click += new System.EventHandler(this.MotorCtrlView_Click);
             this.ResumeLayout(false);
 
         }

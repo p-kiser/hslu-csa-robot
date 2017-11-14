@@ -15,6 +15,12 @@ namespace RobotCtrl
 
     public class DriveCtrl : IDisposable
     {
+        #region motor power constants
+        public const int PowerMotorRight = 0x01;
+        public const int PowerMotorLeft = 0x02;
+        public const int PowerMotorReset = 0x80;
+        public const int PowerMotorOff = 0x00;
+        #endregion
 
         #region members
         private int ioAddress;
@@ -42,7 +48,7 @@ namespace RobotCtrl
         /// </summary>
         public bool Power
         {
-            set { DriveState = (value) ? DriveState | 0x03 : DriveState & ~0x03; }
+            set { DriveState = (value) ? DriveState | (PowerMotorRight + PowerMotorLeft) : DriveState & ~(PowerMotorRight + PowerMotorLeft); }
         }
 
 
@@ -52,8 +58,8 @@ namespace RobotCtrl
         /// </summary>
         public bool PowerRight
         {
-            get { return false; } // ToDo
-            set { } // ToDo
+            get { return (DriveState & PowerMotorRight) == PowerMotorRight; } // ToD
+            set { DriveState = (value) ? DriveState | PowerMotorRight : DriveState & ~PowerMotorRight; }
         }
 
 
@@ -62,8 +68,8 @@ namespace RobotCtrl
         /// </summary>
         public bool PowerLeft
         {
-            get { return false; } // ToDo
-            set { } // ToDo
+            get { return (DriveState & PowerMotorLeft) == PowerMotorLeft; }
+            set { DriveState = (value) ? DriveState | PowerMotorLeft : DriveState & ~PowerMotorLeft; }
         }
 
 
@@ -89,7 +95,7 @@ namespace RobotCtrl
         }
         #endregion
 
-
+        
         #region methods
         /// <summary>
         /// Setzt die beiden Motorencontroller (LM629) zurück, 
@@ -97,11 +103,11 @@ namespace RobotCtrl
         /// </summary>
         public void Reset()
         {
-            // DriveStatusCtrl = 0x00;
+            DriveState = PowerMotorOff;
             Thread.Sleep(5);
-            // DriveStatusCtrl = 0x80;
+            DriveState = PowerMotorReset;
             Thread.Sleep(5);
-            // DriveStatusCtrl = 0x00;
+            DriveState = PowerMotorOff;
             Thread.Sleep(5);
         }
         #endregion

@@ -39,9 +39,9 @@ namespace RobotView
             // 
             // textBoxDriveCtrlStatus
             // 
-            this.textBoxDriveCtrlStatus.Location = new System.Drawing.Point(323, 66);
+            this.textBoxDriveCtrlStatus.Location = new System.Drawing.Point(323, 60);
             this.textBoxDriveCtrlStatus.Name = "textBoxDriveCtrlStatus";
-            this.textBoxDriveCtrlStatus.Size = new System.Drawing.Size(184, 39);
+            this.textBoxDriveCtrlStatus.Size = new System.Drawing.Size(184, 23);
             this.textBoxDriveCtrlStatus.TabIndex = 15;
             // 
             // label4
@@ -56,7 +56,7 @@ namespace RobotView
             // 
             this.checkBoxDriveCtrlRight.Location = new System.Drawing.Point(231, 13);
             this.checkBoxDriveCtrlRight.Name = "checkBoxDriveCtrlRight";
-            this.checkBoxDriveCtrlRight.Size = new System.Drawing.Size(63, 47);
+            this.checkBoxDriveCtrlRight.Size = new System.Drawing.Size(63, 36);
             this.checkBoxDriveCtrlRight.TabIndex = 14;
             this.checkBoxDriveCtrlRight.Text = "R";
             this.checkBoxDriveCtrlRight.CheckStateChanged += new System.EventHandler(this.checkBoxDriveCtrlRight_CheckStateChanged);
@@ -65,16 +65,16 @@ namespace RobotView
             // 
             this.buttonResetDriveCtrl.Location = new System.Drawing.Point(323, 13);
             this.buttonResetDriveCtrl.Name = "buttonResetDriveCtrl";
-            this.buttonResetDriveCtrl.Size = new System.Drawing.Size(184, 47);
+            this.buttonResetDriveCtrl.Size = new System.Drawing.Size(184, 36);
             this.buttonResetDriveCtrl.TabIndex = 12;
             this.buttonResetDriveCtrl.Text = "Reset";
             this.buttonResetDriveCtrl.Click += new System.EventHandler(this.buttonResetDriveCtrl_Click);
             // 
             // checkBoxDriveCtrlLeft
             // 
-            this.checkBoxDriveCtrlLeft.Location = new System.Drawing.Point(231, 66);
+            this.checkBoxDriveCtrlLeft.Location = new System.Drawing.Point(231, 55);
             this.checkBoxDriveCtrlLeft.Name = "checkBoxDriveCtrlLeft";
-            this.checkBoxDriveCtrlLeft.Size = new System.Drawing.Size(63, 39);
+            this.checkBoxDriveCtrlLeft.Size = new System.Drawing.Size(63, 34);
             this.checkBoxDriveCtrlLeft.TabIndex = 13;
             this.checkBoxDriveCtrlLeft.Text = "L";
             this.checkBoxDriveCtrlLeft.CheckStateChanged += new System.EventHandler(this.checkBoxDriveCtrlLeft_CheckStateChanged);
@@ -83,7 +83,7 @@ namespace RobotView
             // 
             this.label3.Location = new System.Drawing.Point(3, 60);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(213, 36);
+            this.label3.Size = new System.Drawing.Size(213, 23);
             this.label3.Text = "Power left/right";
             // 
             // timer
@@ -101,7 +101,7 @@ namespace RobotView
             this.Controls.Add(this.checkBoxDriveCtrlLeft);
             this.Controls.Add(this.label3);
             this.Name = "DriveCtrlView";
-            this.Size = new System.Drawing.Size(538, 127);
+            this.Size = new System.Drawing.Size(538, 102);
             this.ResumeLayout(false);
 
         }

@@ -44,7 +44,7 @@
             // 
             // motorCtrlView
             // 
-            this.motorCtrlView.Location = new System.Drawing.Point(21, 130);
+            this.motorCtrlView.Location = new System.Drawing.Point(42, 121);
             this.motorCtrlView.MotorCtrl = null;
             this.motorCtrlView.Name = "motorCtrlView";
             this.motorCtrlView.Size = new System.Drawing.Size(461, 273);
@@ -54,7 +54,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(667, 460);
+            this.ClientSize = new System.Drawing.Size(577, 422);
             this.Controls.Add(this.driveCtrlView);
             this.Controls.Add(this.motorCtrlView);
             this.Menu = this.mainMenu1;
