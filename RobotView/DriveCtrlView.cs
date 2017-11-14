@@ -22,7 +22,6 @@ namespace RobotView
         public DriveCtrlView()
         {
             InitializeComponent();
-            DriveCtrl = new DriveCtrl(Constants.IODriveCtrl);
         }
         #endregion
 
@@ -35,17 +34,20 @@ namespace RobotView
         #region methods
         private void checkBoxDriveCtrlRight_CheckStateChanged(object sender, EventArgs e)
         {
-            if (DriveCtrl != null) DriveCtrl.PowerRight = checkBoxDriveCtrlRight.Checked;
+            if (DriveCtrl != null)
+                DriveCtrl.PowerRight = checkBoxDriveCtrlRight.Checked;
         }
 
         private void checkBoxDriveCtrlLeft_CheckStateChanged(object sender, EventArgs e)
         {
-            if (DriveCtrl != null) DriveCtrl.PowerLeft = checkBoxDriveCtrlLeft.Checked;
+            if (DriveCtrl != null)
+                DriveCtrl.PowerLeft = checkBoxDriveCtrlLeft.Checked;
         }
 
         private void buttonResetDriveCtrl_Click(object sender, EventArgs e)
         {
-            if (DriveCtrl != null) DriveCtrl.Reset();
+            if (DriveCtrl != null)
+                DriveCtrl.Reset();
         }
 
         private void timer_Tick(object sender, EventArgs e)

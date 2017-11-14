@@ -41,7 +41,7 @@ namespace RobotView
             // 
             this.textBoxDriveCtrlStatus.Location = new System.Drawing.Point(323, 60);
             this.textBoxDriveCtrlStatus.Name = "textBoxDriveCtrlStatus";
-            this.textBoxDriveCtrlStatus.Size = new System.Drawing.Size(184, 23);
+            this.textBoxDriveCtrlStatus.Size = new System.Drawing.Size(184, 39);
             this.textBoxDriveCtrlStatus.TabIndex = 15;
             // 
             // label4

@@ -71,10 +71,6 @@
       <Project>{CF427539-9A22-434B-A8E7-7AA40CE33964}</Project>
       <Name>RobotCtrl</Name>
     </ProjectReference>
-    <ProjectReference Include="..\RobotIO\RobotIO.csproj">
-      <Project>{F3E3E67A-7711-44AF-AFAF-61F59A70CAAC}</Project>
-      <Name>RobotIO</Name>
-    </ProjectReference>
     <ProjectReference Include="..\RobotView\RobotView.csproj">
       <Project>{13B42BB0-1A98-4544-B7BC-181CC81D9646}</Project>
       <Name>RobotView</Name>

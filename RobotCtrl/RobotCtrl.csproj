@@ -64,7 +64,12 @@
     <Compile Include="Robot.cs" />
     <Compile Include="RobotConsole.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\RobotIO\RobotIO.csproj">
+      <Project>{F3E3E67A-7711-44AF-AFAF-61F59A70CAAC}</Project>
+      <Name>RobotIO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkTargetsVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

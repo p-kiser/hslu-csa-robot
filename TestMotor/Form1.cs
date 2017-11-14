@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using RobotCtrl;
+
 namespace TestMotor
 {
     public partial class Form1 : Form
@@ -14,6 +16,8 @@ namespace TestMotor
         public Form1()
         {
             InitializeComponent();
+            driveCtrlView.DriveCtrl = new DriveCtrl(Constants.IODriveCtrl);
+            motorCtrlView.MotorCtrl = new MotorCtrl(Constants.IOMotorCtrlLeft);
         }
     }
 }

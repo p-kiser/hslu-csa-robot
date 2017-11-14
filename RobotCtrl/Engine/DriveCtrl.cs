@@ -82,14 +82,14 @@ namespace RobotCtrl
                 int val;
                 lock(syncIODriveCtrl)
                 {
-                    val = IOPort.Read(Constants.IODriveCtrl);
+                    val = IOPort.Read(ioAddress);
                 }
                 return val;
             }
             set {
                 lock(syncIODriveCtrl)
                 {
-                    IOPort.Write(Constants.IODriveCtrl, value);
+                    IOPort.Write(ioAddress, value);
                 }
             }
         }
