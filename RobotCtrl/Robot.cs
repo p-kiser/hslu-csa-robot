@@ -13,7 +13,7 @@ namespace RobotCtrl
 {
     public class Robot: IDisposable
     {
-
+        
         #region members
         private RobotConsole robotConsole;
         //private Radar radar;
