@@ -22,6 +22,7 @@ namespace RobotView
         public DriveCtrlView()
         {
             InitializeComponent();
+            DriveCtrl = new DriveCtrl(Constants.IODriveCtrl);
         }
         #endregion
 
