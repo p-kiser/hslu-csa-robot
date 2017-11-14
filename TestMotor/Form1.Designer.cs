@@ -30,14 +30,44 @@
         private void InitializeComponent()
         {
             this.mainMenu1 = new System.Windows.Forms.MainMenu();
-            this.Menu = this.mainMenu1;
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.Text = "Form1";
+            this.driveCtrlView = new RobotView.DriveCtrlView();
+            this.motorCtrlView = new RobotView.MotorCtrlView();
+            this.SuspendLayout();
+            // 
+            // driveCtrlView
+            // 
+            this.driveCtrlView.DriveCtrl = null;
+            this.driveCtrlView.Location = new System.Drawing.Point(21, 12);
+            this.driveCtrlView.Name = "driveCtrlView";
+            this.driveCtrlView.Size = new System.Drawing.Size(538, 128);
+            this.driveCtrlView.TabIndex = 0;
+            // 
+            // motorCtrlView
+            // 
+            this.motorCtrlView.Location = new System.Drawing.Point(21, 130);
+            this.motorCtrlView.MotorCtrl = null;
+            this.motorCtrlView.Name = "motorCtrlView";
+            this.motorCtrlView.Size = new System.Drawing.Size(461, 273);
+            this.motorCtrlView.TabIndex = 0;
+            // 
+            // Form1
+            // 
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(667, 460);
+            this.Controls.Add(this.driveCtrlView);
+            this.Controls.Add(this.motorCtrlView);
+            this.Menu = this.mainMenu1;
+            this.Name = "Form1";
+            this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private RobotView.DriveCtrlView driveCtrlView;
+        private RobotView.MotorCtrlView motorCtrlView;
     }
 }
 

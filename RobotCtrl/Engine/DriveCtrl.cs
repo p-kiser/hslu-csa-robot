@@ -18,6 +18,7 @@ namespace RobotCtrl
 
         #region members
         private int ioAddress;
+        private readonly object syncIODriveCtrl = new object();
         #endregion
 
 
@@ -71,8 +72,20 @@ namespace RobotCtrl
         /// </summary>
         public int DriveState
         {
-            get { return 0; } // ToDo
-            set { } // ToDo
+            get {
+                int val;
+                lock(syncIODriveCtrl)
+                {
+                    val = IOPort.Read(Constants.IODriveCtrl);
+                }
+                return val;
+            }
+            set {
+                lock(syncIODriveCtrl)
+                {
+                    IOPort.Write(Constants.IODriveCtrl, value);
+                }
+            }
         }
         #endregion
 

@@ -58,5 +58,10 @@ namespace RobotView
             }
         }
         #endregion
+
+        private void label4_ParentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
