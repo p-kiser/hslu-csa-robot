@@ -71,7 +71,7 @@ namespace RobotView
             0,
             -2147483648});
             this.upDownTurnAngle.Name = "upDownTurnAngle";
-            this.upDownTurnAngle.Size = new System.Drawing.Size(75, 24);
+            this.upDownTurnAngle.Size = new System.Drawing.Size(75, 40);
             this.upDownTurnAngle.TabIndex = 23;
             this.upDownTurnAngle.Value = new decimal(new int[] {
             90,
@@ -97,8 +97,7 @@ namespace RobotView
             // 
             // RunTurn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.Controls.Add(this.buttonTurnStart);
             this.Controls.Add(this.buttonTurnNeg);
             this.Controls.Add(this.upDownTurnAngle);

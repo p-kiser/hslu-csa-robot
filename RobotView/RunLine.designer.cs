@@ -71,7 +71,7 @@ namespace RobotView
             0,
             -2147483648});
             this.upDownLineLength.Name = "upDownLineLength";
-            this.upDownLineLength.Size = new System.Drawing.Size(75, 24);
+            this.upDownLineLength.Size = new System.Drawing.Size(75, 40);
             this.upDownLineLength.TabIndex = 20;
             this.upDownLineLength.Value = new decimal(new int[] {
             1000,
@@ -97,8 +97,7 @@ namespace RobotView
             // 
             // RunLine
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.Controls.Add(this.buttonLineStart);
             this.Controls.Add(this.buttonLineNeg);
             this.Controls.Add(this.upDownLineLength);

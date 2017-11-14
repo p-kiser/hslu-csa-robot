@@ -132,77 +132,77 @@ namespace RobotView
             // 
             this.textBoxRuntime.Location = new System.Drawing.Point(169, 228);
             this.textBoxRuntime.Name = "textBoxRuntime";
-            this.textBoxRuntime.Size = new System.Drawing.Size(75, 23);
+            this.textBoxRuntime.Size = new System.Drawing.Size(75, 39);
             this.textBoxRuntime.TabIndex = 51;
             // 
             // textBoxAngle
             // 
             this.textBoxAngle.Location = new System.Drawing.Point(169, 199);
             this.textBoxAngle.Name = "textBoxAngle";
-            this.textBoxAngle.Size = new System.Drawing.Size(75, 23);
+            this.textBoxAngle.Size = new System.Drawing.Size(75, 39);
             this.textBoxAngle.TabIndex = 50;
             // 
             // textBoxPosY
             // 
             this.textBoxPosY.Location = new System.Drawing.Point(169, 170);
             this.textBoxPosY.Name = "textBoxPosY";
-            this.textBoxPosY.Size = new System.Drawing.Size(75, 23);
+            this.textBoxPosY.Size = new System.Drawing.Size(75, 39);
             this.textBoxPosY.TabIndex = 49;
             // 
             // textBoxPosX
             // 
             this.textBoxPosX.Location = new System.Drawing.Point(169, 141);
             this.textBoxPosX.Name = "textBoxPosX";
-            this.textBoxPosX.Size = new System.Drawing.Size(75, 23);
+            this.textBoxPosX.Size = new System.Drawing.Size(75, 39);
             this.textBoxPosX.TabIndex = 48;
             // 
             // textBoxRelPosRight
             // 
             this.textBoxRelPosRight.Location = new System.Drawing.Point(210, 112);
             this.textBoxRelPosRight.Name = "textBoxRelPosRight";
-            this.textBoxRelPosRight.Size = new System.Drawing.Size(75, 23);
+            this.textBoxRelPosRight.Size = new System.Drawing.Size(75, 39);
             this.textBoxRelPosRight.TabIndex = 47;
             // 
             // textBoxRelPosLeft
             // 
             this.textBoxRelPosLeft.Location = new System.Drawing.Point(129, 112);
             this.textBoxRelPosLeft.Name = "textBoxRelPosLeft";
-            this.textBoxRelPosLeft.Size = new System.Drawing.Size(75, 23);
+            this.textBoxRelPosLeft.Size = new System.Drawing.Size(75, 39);
             this.textBoxRelPosLeft.TabIndex = 46;
             // 
             // textBoxSpeedRight
             // 
             this.textBoxSpeedRight.Location = new System.Drawing.Point(210, 83);
             this.textBoxSpeedRight.Name = "textBoxSpeedRight";
-            this.textBoxSpeedRight.Size = new System.Drawing.Size(75, 23);
+            this.textBoxSpeedRight.Size = new System.Drawing.Size(75, 39);
             this.textBoxSpeedRight.TabIndex = 45;
             // 
             // textBoxSpeedLeft
             // 
             this.textBoxSpeedLeft.Location = new System.Drawing.Point(129, 83);
             this.textBoxSpeedLeft.Name = "textBoxSpeedLeft";
-            this.textBoxSpeedLeft.Size = new System.Drawing.Size(75, 23);
+            this.textBoxSpeedLeft.Size = new System.Drawing.Size(75, 39);
             this.textBoxSpeedLeft.TabIndex = 44;
             // 
             // textBoxMotorCtrlRight
             // 
             this.textBoxMotorCtrlRight.Location = new System.Drawing.Point(210, 54);
             this.textBoxMotorCtrlRight.Name = "textBoxMotorCtrlRight";
-            this.textBoxMotorCtrlRight.Size = new System.Drawing.Size(75, 23);
+            this.textBoxMotorCtrlRight.Size = new System.Drawing.Size(75, 39);
             this.textBoxMotorCtrlRight.TabIndex = 43;
             // 
             // textBoxMotorCtrlLeft
             // 
             this.textBoxMotorCtrlLeft.Location = new System.Drawing.Point(129, 54);
             this.textBoxMotorCtrlLeft.Name = "textBoxMotorCtrlLeft";
-            this.textBoxMotorCtrlLeft.Size = new System.Drawing.Size(75, 23);
+            this.textBoxMotorCtrlLeft.Size = new System.Drawing.Size(75, 39);
             this.textBoxMotorCtrlLeft.TabIndex = 42;
             // 
             // textBoxDriveCtrl
             // 
             this.textBoxDriveCtrl.Location = new System.Drawing.Point(169, 25);
             this.textBoxDriveCtrl.Name = "textBoxDriveCtrl";
-            this.textBoxDriveCtrl.Size = new System.Drawing.Size(75, 23);
+            this.textBoxDriveCtrl.Size = new System.Drawing.Size(75, 39);
             this.textBoxDriveCtrl.TabIndex = 41;
             // 
             // label2
@@ -226,8 +226,7 @@ namespace RobotView
             // 
             // DriveView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.Controls.Add(this.label11);
             this.Controls.Add(this.buttonReset);
             this.Controls.Add(this.label10);

@@ -85,7 +85,7 @@ namespace RobotView
             // 
             this.textBoxDriveCtrlMotorStatus.Location = new System.Drawing.Point(350, 27);
             this.textBoxDriveCtrlMotorStatus.Name = "textBoxDriveCtrlMotorStatus";
-            this.textBoxDriveCtrlMotorStatus.Size = new System.Drawing.Size(72, 23);
+            this.textBoxDriveCtrlMotorStatus.Size = new System.Drawing.Size(72, 39);
             this.textBoxDriveCtrlMotorStatus.TabIndex = 59;
             // 
             // label11
@@ -106,7 +106,7 @@ namespace RobotView
             // 
             this.textBoxTicks.Location = new System.Drawing.Point(350, 85);
             this.textBoxTicks.Name = "textBoxTicks";
-            this.textBoxTicks.Size = new System.Drawing.Size(72, 23);
+            this.textBoxTicks.Size = new System.Drawing.Size(72, 39);
             this.textBoxTicks.TabIndex = 68;
             // 
             // buttonResetMotorCtrl
@@ -138,7 +138,7 @@ namespace RobotView
             // 
             this.textBoxDistance.Location = new System.Drawing.Point(350, 56);
             this.textBoxDistance.Name = "textBoxDistance";
-            this.textBoxDistance.Size = new System.Drawing.Size(72, 23);
+            this.textBoxDistance.Size = new System.Drawing.Size(72, 39);
             this.textBoxDistance.TabIndex = 67;
             // 
             // buttonMotorCtrlStart
@@ -154,7 +154,7 @@ namespace RobotView
             // 
             this.textBoxMotorSpeed.Location = new System.Drawing.Point(350, 179);
             this.textBoxMotorSpeed.Name = "textBoxMotorSpeed";
-            this.textBoxMotorSpeed.Size = new System.Drawing.Size(72, 23);
+            this.textBoxMotorSpeed.Size = new System.Drawing.Size(72, 39);
             this.textBoxMotorSpeed.TabIndex = 66;
             // 
             // label7
@@ -168,7 +168,7 @@ namespace RobotView
             // 
             this.textBoxAcceleration.Location = new System.Drawing.Point(350, 219);
             this.textBoxAcceleration.Name = "textBoxAcceleration";
-            this.textBoxAcceleration.Size = new System.Drawing.Size(72, 23);
+            this.textBoxAcceleration.Size = new System.Drawing.Size(72, 39);
             this.textBoxAcceleration.TabIndex = 61;
             // 
             // label8
@@ -213,8 +213,7 @@ namespace RobotView
             // 
             // MotorCtrlView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.Controls.Add(this.labelCurrentSpeed);
             this.Controls.Add(this.buttonResetTicks);
             this.Controls.Add(this.label6);
