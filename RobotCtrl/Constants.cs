@@ -35,5 +35,9 @@ namespace RobotCtrl
         public const int IOMotorCtrlRight = 0xF320;
         public const int IOMotorCtrlLeft = 0xF328;
 
+        // Blink-Parameter
+        public const int blinkCadence = 150;
+        public const int numberOfBlinks = 11;
+
     }
 }
