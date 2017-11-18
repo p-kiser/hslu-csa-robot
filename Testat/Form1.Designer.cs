@@ -127,7 +127,7 @@ namespace Testat
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(903, 471);
+            this.ClientSize = new System.Drawing.Size(817, 471);
             this.Controls.Add(this.haltButton);
             this.Controls.Add(this.stopButton);
             this.Controls.Add(this.runLine);

@@ -8,6 +8,7 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace RobotCtrl
 {
@@ -27,6 +28,7 @@ namespace RobotCtrl
             this.robotConsole = new RobotConsole();
             this.radar = new Radar(Constants.IORadarSensor);
             this.drive = new Drive();
+            //this.Blink();
         }
 
         /// <summary>
@@ -75,8 +77,25 @@ namespace RobotCtrl
         public PositionInfo Position { get { return drive.Position; } set { drive.Position = value; } }
         #endregion
 
-        #region functions
-            
+        #region methods
+        public void Blink()
+        {
+            for (int i = 0; i < Constants.numberOfBlinks; i++)
+            {
+                TurnOnTheLights(true);
+                Thread.Sleep(Constants.blinkCadence);
+                TurnOnTheLights(false);
+                Thread.Sleep(Constants.blinkCadence);
+            }
+        }
+
+        private void TurnOnTheLights(bool turnOn)
+        {
+            for (int i = 0; i <= 3; i++)
+            {
+                robotConsole[(Leds)i].LedEnabled = turnOn;
+            }
+        }
         #endregion
     }
 }
