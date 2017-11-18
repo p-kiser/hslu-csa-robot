@@ -126,6 +126,7 @@ namespace RobotView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Controls.Add(this.numPadButton2);
             this.Controls.Add(this.numPadButton1);
             this.Controls.Add(this.label16);

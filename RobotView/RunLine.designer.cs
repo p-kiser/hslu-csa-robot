@@ -108,6 +108,7 @@ namespace RobotView
             // RunLine
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Controls.Add(this.numPadButton);
             this.Controls.Add(this.buttonLineStart);
             this.Controls.Add(this.buttonLineNeg);
