@@ -43,5 +43,14 @@ namespace RobotView
             buttonTurnStart_Click(null, EventArgs.Empty);
         }
         #endregion
+
+        private void numPadButton_Click(object sender, EventArgs e)
+        {
+            RobotView.NumberKeyboard nk = new RobotView.NumberKeyboard();
+            if (nk.ShowDialog() == DialogResult.OK)
+            {
+                upDownTurnAngle.Value = (decimal)nk.Number;
+            }
+        }
     }
 }

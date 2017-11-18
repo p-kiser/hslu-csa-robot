@@ -51,5 +51,13 @@ namespace RobotView
         }
         #endregion
 
+        private void numPadButton_Click(object sender, EventArgs e)
+        {
+            RobotView.NumberKeyboard nk = new RobotView.NumberKeyboard();
+            if (nk.ShowDialog() == DialogResult.OK)
+            {
+                upDownLineLength.Value = (decimal)nk.Number;
+            }
+        }
     }
 }
