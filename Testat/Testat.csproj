@@ -67,6 +67,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\RobotCtrl\RobotCtrl.csproj">
+      <Project>{CF427539-9A22-434B-A8E7-7AA40CE33964}</Project>
+      <Name>RobotCtrl</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RobotView\RobotView.csproj">
       <Project>{13B42BB0-1A98-4544-B7BC-181CC81D9646}</Project>
       <Name>RobotView</Name>

@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommonRunParameters.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonRunParameters.designer.cs">
+      <DependentUpon>CommonRunParameters.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsoleView.cs">
       <SubType>usercontrol</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CommonRunParameters.resx">
+      <DependentUpon>CommonRunParameters.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsoleView.resx">
       <DependentUpon>ConsoleView.cs</DependentUpon>
     </EmbeddedResource>

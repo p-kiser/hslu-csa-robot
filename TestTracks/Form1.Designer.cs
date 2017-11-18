@@ -39,7 +39,17 @@
             // 
             this.runTurn.Acceleration = 0.5F;
             this.runTurn.Drive = null;
-            this.runTurn.Location = new System.Drawing.Point(48, 313);
+            this.runTurn.Location = new System.Drawing.Point(497, 342);
+            this.runTurn.Name = "runTurn";
+            this.runTurn.Size = new System.Drawing.Size(454, 98);
+            this.runTurn.Speed = 1F;
+            this.runTurn.TabIndex = 0;
+            // 
+            // runTurn
+            // 
+            this.runTurn.Acceleration = 0.5F;
+            this.runTurn.Drive = null;
+            this.runTurn.Location = new System.Drawing.Point(497, 342);
             this.runTurn.Name = "runTurn";
             this.runTurn.Size = new System.Drawing.Size(454, 98);
             this.runTurn.Speed = 1F;
@@ -49,7 +59,7 @@
             // 
             this.runArc.Acceleration = 0.5F;
             this.runArc.Drive = null;
-            this.runArc.Location = new System.Drawing.Point(548, 159);
+            this.runArc.Location = new System.Drawing.Point(497, 201);
             this.runArc.Name = "runArc";
             this.runArc.Size = new System.Drawing.Size(454, 115);
             this.runArc.Speed = 1F;
@@ -60,7 +70,7 @@
             this.runLine.Acceleration = 0.5F;
             this.runLine.Drive = null;
             this.runLine.Length = 1F;
-            this.runLine.Location = new System.Drawing.Point(531, 38);
+            this.runLine.Location = new System.Drawing.Point(497, 80);
             this.runLine.Name = "runLine";
             this.runLine.Size = new System.Drawing.Size(454, 115);
             this.runLine.Speed = 1F;
