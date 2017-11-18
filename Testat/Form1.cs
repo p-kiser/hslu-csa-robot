@@ -7,17 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using RobotCtrl;
+
 namespace Testat
 {
     public partial class Form1 : Form
     {
-        private RobotCtrl.Robot robot;
+        private Robot robot;
 
         public Form1()
         {
             InitializeComponent();
 
-            robot = new RobotCtrl.Robot();
+            robot = new Robot();
 
             driveView.Drive 
                 = runArc.Drive
@@ -27,6 +29,25 @@ namespace Testat
             consoleView.robotConsole = robot.RobotConsole;
 
             robot.Drive.Power = true;
+
+            addStartToSwitch(Switches.Switch1, runLine);
+            addStartToSwitch(Switches.Switch2, runArc);
+            addStartToSwitch(Switches.Switch3, runTurn);
+        }
+
+        private void addStartToSwitch(Switches swi, RobotView.Startable runner)
+        {
+            robot.RobotConsole[swi]
+                .SwitchStateChanged += (object sender, SwitchEventArgs e) =>
+                {
+                    if (e.SwitchEnabled)
+                    {
+                        runner.Start();
+                    } else
+                    {
+                        robot.Drive.Halt();
+                    }
+                };
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,16 +61,6 @@ namespace Testat
         }
 
         private void runLine_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
         {
 
         }

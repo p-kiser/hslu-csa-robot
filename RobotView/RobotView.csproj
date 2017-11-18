@@ -115,6 +115,7 @@
     <Compile Include="RunTurn.designer.cs">
       <DependentUpon>RunTurn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Startable.cs" />
     <Compile Include="SwitchView.cs">
       <SubType>usercontrol</SubType>
     </Compile>

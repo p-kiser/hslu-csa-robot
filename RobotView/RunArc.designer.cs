@@ -184,7 +184,6 @@ namespace RobotView
             this.Name = "RunArc";
             this.Size = new System.Drawing.Size(464, 90);
             this.ResumeLayout(false);
-
         }
 
         #endregion

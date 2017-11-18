@@ -41,7 +41,7 @@ namespace RobotView
         {
             InitializeComponent();            
         }
-        
+
         private void appendAction(Switch swi, Led led)
         {
             swi.SwitchStateChanged += (object sender, SwitchEventArgs e) =>

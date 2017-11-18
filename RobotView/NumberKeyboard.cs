@@ -30,7 +30,7 @@ namespace RobotView
 
         public float Number
         {
-            get { return float.Parse(TextValue); }
+            get { return TextValue.Equals("") ? 0 : float.Parse(TextValue); }
             set { TextValue = value.ToString(); }
         }
 

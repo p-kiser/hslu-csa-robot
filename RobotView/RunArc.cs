@@ -9,7 +9,7 @@ using RobotCtrl;
 
 namespace RobotView
 {
-    public partial class RunArc : UserControl
+    public partial class RunArc : UserControl, Startable
     {
         #region constructor & destructor
         public RunArc()
@@ -33,7 +33,7 @@ namespace RobotView
         }
 
 
-        private void buttonStartArc_Click(object sender, EventArgs e)
+        public void buttonStartArc_Click(object sender, EventArgs e)
         {
             if (Drive != null)
             {
@@ -59,7 +59,13 @@ namespace RobotView
         private void numPadButton1_Click(object sender, EventArgs e)
         {
             NumberKeyboard.startNumberKeyboard((float number) => {
-                upDownArcRadius.Value = (decimal)number;
+                try
+                {
+                    upDownArcRadius.Value = (decimal)number;
+                }
+                catch (ArgumentOutOfRangeException ex) {
+                    //TODO
+                }
             });
         }
 

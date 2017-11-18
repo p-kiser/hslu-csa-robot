@@ -9,7 +9,7 @@ using RobotCtrl;
 
 namespace RobotView
 {
-    public partial class RunTurn : UserControl
+    public partial class RunTurn : UserControl, Startable
     {
         #region constructor & destructor
         public RunTurn()
