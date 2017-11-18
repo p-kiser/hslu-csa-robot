@@ -100,6 +100,24 @@ namespace RobotView
             add { upDownAcceleration.ValueChanged += value; }
             remove { upDownAcceleration.ValueChanged -= value; }
         }
+
+        private void numPadButton1_Click(object sender, EventArgs e)
+        {
+            NumberKeyboard nk = new NumberKeyboard();
+            if (nk.ShowDialog() == DialogResult.OK)
+            {
+                upDownSpeed.Value = (decimal) nk.Number;
+            }
+        }
+
+        private void numPadButton2_Click(object sender, EventArgs e)
+        {
+            NumberKeyboard nk = new NumberKeyboard();
+            if (nk.ShowDialog() == DialogResult.OK)
+            {
+                upDownAcceleration.Value = (decimal)nk.Number;
+            }
+        }
         #endregion
 
 #endif
