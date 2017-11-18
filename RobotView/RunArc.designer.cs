@@ -154,6 +154,7 @@ namespace RobotView
             this.numPadButton2.Size = new System.Drawing.Size(72, 24);
             this.numPadButton2.TabIndex = 32;
             this.numPadButton2.Text = "...";
+            this.numPadButton2.Click += new System.EventHandler(this.numPadButton2_Click);
             // 
             // numPadButton1
             // 
@@ -162,6 +163,7 @@ namespace RobotView
             this.numPadButton1.Size = new System.Drawing.Size(72, 26);
             this.numPadButton1.TabIndex = 33;
             this.numPadButton1.Text = "...";
+            this.numPadButton1.Click += new System.EventHandler(this.numPadButton1_Click);
             // 
             // RunArc
             // 

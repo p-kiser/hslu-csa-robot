@@ -103,6 +103,7 @@ namespace RobotView
             this.numPadButton.Size = new System.Drawing.Size(72, 24);
             this.numPadButton.TabIndex = 26;
             this.numPadButton.Text = "...";
+            this.numPadButton.Click += new System.EventHandler(this.numPadButton_Click);
             // 
             // RunTurn
             // 
