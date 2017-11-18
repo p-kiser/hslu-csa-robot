@@ -74,5 +74,9 @@ namespace RobotCtrl
         /// </summary>
         public PositionInfo Position { get { return drive.Position; } set { drive.Position = value; } }
         #endregion
+
+        #region functions
+            
+        #endregion
     }
 }
