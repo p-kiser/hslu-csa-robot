@@ -31,7 +31,7 @@ namespace RobotView
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-      /*      this.switchView4 = new RobotView.SwitchView();
+            this.switchView4 = new RobotView.SwitchView();
             this.switchView3 = new RobotView.SwitchView();
             this.switchView2 = new RobotView.SwitchView();
             this.switchView1 = new RobotView.SwitchView();
@@ -122,7 +122,6 @@ namespace RobotView
             this.ledView4.Location = new System.Drawing.Point(150, 41);
             this.ledView4.Name = "ledView4";
             this.ledView4.Size = new System.Drawing.Size(34, 31);
-            this.ledView4.State = false;
             this.ledView4.TabIndex = 5;
             // 
             // ledView3
@@ -130,7 +129,6 @@ namespace RobotView
             this.ledView3.Location = new System.Drawing.Point(110, 41);
             this.ledView3.Name = "ledView3";
             this.ledView3.Size = new System.Drawing.Size(34, 31);
-            this.ledView3.State = false;
             this.ledView3.TabIndex = 4;
             // 
             // ledView2
@@ -138,7 +136,6 @@ namespace RobotView
             this.ledView2.Location = new System.Drawing.Point(70, 41);
             this.ledView2.Name = "ledView2";
             this.ledView2.Size = new System.Drawing.Size(34, 31);
-            this.ledView2.State = false;
             this.ledView2.TabIndex = 3;
             // 
             // ledView1
@@ -146,25 +143,27 @@ namespace RobotView
             this.ledView1.Location = new System.Drawing.Point(30, 41);
             this.ledView1.Name = "ledView1";
             this.ledView1.Size = new System.Drawing.Size(34, 31);
-            this.ledView1.State = false;
-            this.ledView1.TabIndex = 0;
+            this.ledView1.TabIndex = 0; 
             // 
             // ConsoleView
-            // */
+            // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-           /** this.Controls.Add(this.switchView4);
-            this.Controls.Add(this.switchView3); */
+
+
+            // ---
+
+            this.Controls.Add(this.switchView4);
+            this.Controls.Add(this.switchView3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            /*  this.Controls.Add(this.ledView4);
-              this.Controls.Add(this.ledView3);
-              this.Controls.Add(this.ledView2);
-              this.Controls.Add(this.switchView2);
-              this.Controls.Add(this.ledView1);
-              this.Controls.Add(this.switchView1);*/
+            this.Controls.Add(this.ledView4);
+            this.Controls.Add(this.ledView3);
+            this.Controls.Add(this.ledView2);
+            this.Controls.Add(this.switchView2);
+            this.Controls.Add(this.ledView1);
+            this.Controls.Add(this.switchView1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "ConsoleView";
             this.Size = new System.Drawing.Size(324, 126);

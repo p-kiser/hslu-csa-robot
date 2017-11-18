@@ -38,7 +38,8 @@ namespace RobotView
             set
             {
                 switchCtrl = value;
-                switchCtrl.SwitchStateChanged += SwitchCtrl_SwitchStateChanged;
+                if(switchCtrl != null)
+                    switchCtrl.SwitchStateChanged += SwitchCtrl_SwitchStateChanged;
             }
 
             get
