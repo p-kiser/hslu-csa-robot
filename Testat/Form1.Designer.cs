@@ -32,35 +32,33 @@ namespace Testat
         private void InitializeComponent()
         {
             this.mainMenu1 = new System.Windows.Forms.MainMenu();
-            this.runTurn = new RobotView.RunTurn();
-            this.runArc = new RobotView.RunArc();
-            this.runLine = new RobotView.RunLine();
-            this.driveView = new RobotView.DriveView();
-            this.consoleView = new RobotView.ConsoleView();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.runLine = new RobotView.RunLine();
+            this.runArc = new RobotView.RunArc();
             this.commonRunParameters = new RobotView.CommonRunParameters();
+            this.runTurn = new RobotView.RunTurn();
+            this.driveView = new RobotView.DriveView();
+            this.consoleView = new RobotView.ConsoleView();
             this.SuspendLayout();
             // 
-            // runTurn
+            // button2
             // 
-            this.runTurn.Acceleration = 0.5F;
-            this.runTurn.Drive = null;
-            this.runTurn.Location = new System.Drawing.Point(548, 347);
-            this.runTurn.Name = "runTurn";
-            this.runTurn.Size = new System.Drawing.Size(454, 98);
-            this.runTurn.Speed = 1F;
-            this.runTurn.TabIndex = 0;
+            this.button2.Location = new System.Drawing.Point(779, 486);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(270, 56);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Stop";
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // runArc
+            // button1
             // 
-            this.runArc.Acceleration = 0.5F;
-            this.runArc.Drive = null;
-            this.runArc.Location = new System.Drawing.Point(548, 215);
-            this.runArc.Name = "runArc";
-            this.runArc.Size = new System.Drawing.Size(454, 115);
-            this.runArc.Speed = 1F;
-            this.runArc.TabIndex = 0;
+            this.button1.Location = new System.Drawing.Point(497, 486);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(231, 77);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Halt";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // runLine
             // 
@@ -72,6 +70,35 @@ namespace Testat
             this.runLine.Size = new System.Drawing.Size(454, 115);
             this.runLine.Speed = 1F;
             this.runLine.TabIndex = 0;
+            // 
+            // runArc
+            // 
+            this.runArc.Acceleration = 0.5F;
+            this.runArc.Drive = null;
+            this.runArc.Location = new System.Drawing.Point(548, 215);
+            this.runArc.Name = "runArc";
+            this.runArc.Size = new System.Drawing.Size(454, 115);
+            this.runArc.Speed = 1F;
+            this.runArc.TabIndex = 0;
+            // 
+            // commonRunParameters
+            // 
+            this.commonRunParameters.Acceleration = 0.3F;
+            this.commonRunParameters.Location = new System.Drawing.Point(526, 22);
+            this.commonRunParameters.Name = "commonRunParameters";
+            this.commonRunParameters.Size = new System.Drawing.Size(601, 77);
+            this.commonRunParameters.Speed = 0.5F;
+            this.commonRunParameters.TabIndex = 3;
+            // 
+            // runTurn
+            // 
+            this.runTurn.Acceleration = 0.5F;
+            this.runTurn.Drive = null;
+            this.runTurn.Location = new System.Drawing.Point(548, 347);
+            this.runTurn.Name = "runTurn";
+            this.runTurn.Size = new System.Drawing.Size(454, 98);
+            this.runTurn.Speed = 1F;
+            this.runTurn.TabIndex = 0;
             // 
             // driveView
             // 
@@ -88,31 +115,6 @@ namespace Testat
             this.consoleView.Name = "consoleView";
             this.consoleView.Size = new System.Drawing.Size(309, 122);
             this.consoleView.TabIndex = 0;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(779, 486);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(270, 56);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Stop";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(497, 486);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(231, 77);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Halt";
-            // 
-            // commonRunParameters
-            // 
-            this.commonRunParameters.Acceleration = 0.3F;
-            this.commonRunParameters.Location = new System.Drawing.Point(526, 22);
-            this.commonRunParameters.Name = "commonRunParameters";
-            this.commonRunParameters.Size = new System.Drawing.Size(601, 77);
-            this.commonRunParameters.Speed = 0.5F;
-            this.commonRunParameters.TabIndex = 3;
             // 
             // Form1
             // 

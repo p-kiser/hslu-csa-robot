@@ -58,11 +58,9 @@ namespace RobotView
 
         private void numPadButton1_Click(object sender, EventArgs e)
         {
-            RobotView.NumberKeyboard nk = new RobotView.NumberKeyboard();
-            if (nk.ShowDialog() == DialogResult.OK)
-            {
-                upDownArcRadius.Value =(decimal) nk.Number;
-            }
+            NumberKeyboard.startNumberKeyboard((float number) => {
+                upDownArcRadius.Value = (decimal)number;
+            });
         }
 
         private void numPadButton2_Click(object sender, EventArgs e)

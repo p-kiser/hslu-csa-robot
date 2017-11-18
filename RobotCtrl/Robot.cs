@@ -16,7 +16,7 @@ namespace RobotCtrl
         
         #region members
         private RobotConsole robotConsole;
-        //private Radar radar;
+        private Radar radar;
         private Drive drive;
         #endregion
 
@@ -25,7 +25,7 @@ namespace RobotCtrl
         public Robot()
         {
             this.robotConsole = new RobotConsole();
-            //this.radar = new Radar(Constants.IORadarSensor);
+            this.radar = new Radar(Constants.IORadarSensor);
             this.drive = new Drive();
         }
 
@@ -54,10 +54,10 @@ namespace RobotCtrl
         /// <summary>
         /// Liefert den Radar des Roboters
         /// </summary>
-        //public Radar Radar
-        //{
-        //    get { return this.radar; }
-        //}
+        public Radar Radar
+        {
+            get { return this.radar; }
+        }
 
 
         /// <summary>
