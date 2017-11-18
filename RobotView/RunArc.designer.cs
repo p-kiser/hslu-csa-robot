@@ -36,6 +36,8 @@ namespace RobotView
             this.label5 = new System.Windows.Forms.Label();
             this.upDownArcRadius = new System.Windows.Forms.NumericUpDown();
             this.buttonStartArc = new System.Windows.Forms.Button();
+            this.numPadButton2 = new System.Windows.Forms.Button();
+            this.numPadButton1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonArcNeg
@@ -90,7 +92,7 @@ namespace RobotView
             0,
             -2147483648});
             this.upDownArcAngle.Name = "upDownArcAngle";
-            this.upDownArcAngle.Size = new System.Drawing.Size(75, 40);
+            this.upDownArcAngle.Size = new System.Drawing.Size(75, 24);
             this.upDownArcAngle.TabIndex = 27;
             this.upDownArcAngle.Value = new decimal(new int[] {
             90,
@@ -129,7 +131,7 @@ namespace RobotView
             0,
             0});
             this.upDownArcRadius.Name = "upDownArcRadius";
-            this.upDownArcRadius.Size = new System.Drawing.Size(75, 40);
+            this.upDownArcRadius.Size = new System.Drawing.Size(75, 24);
             this.upDownArcRadius.TabIndex = 28;
             this.upDownArcRadius.Value = new decimal(new int[] {
             1000,
@@ -139,15 +141,33 @@ namespace RobotView
             // 
             // buttonStartArc
             // 
-            this.buttonStartArc.Location = new System.Drawing.Point(296, 62);
+            this.buttonStartArc.Location = new System.Drawing.Point(374, 62);
             this.buttonStartArc.Name = "buttonStartArc";
-            this.buttonStartArc.Size = new System.Drawing.Size(51, 24);
+            this.buttonStartArc.Size = new System.Drawing.Size(83, 24);
             this.buttonStartArc.TabIndex = 23;
             this.buttonStartArc.Text = "Start";
+            // 
+            // numPadButton2
+            // 
+            this.numPadButton2.Location = new System.Drawing.Point(297, 62);
+            this.numPadButton2.Name = "numPadButton2";
+            this.numPadButton2.Size = new System.Drawing.Size(72, 24);
+            this.numPadButton2.TabIndex = 32;
+            this.numPadButton2.Text = "...";
+            // 
+            // numPadButton1
+            // 
+            this.numPadButton1.Location = new System.Drawing.Point(297, 30);
+            this.numPadButton1.Name = "numPadButton1";
+            this.numPadButton1.Size = new System.Drawing.Size(72, 26);
+            this.numPadButton1.TabIndex = 33;
+            this.numPadButton1.Text = "...";
             // 
             // RunArc
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.Controls.Add(this.numPadButton1);
+            this.Controls.Add(this.numPadButton2);
             this.Controls.Add(this.buttonArcNeg);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -158,7 +178,7 @@ namespace RobotView
             this.Controls.Add(this.upDownArcRadius);
             this.Controls.Add(this.buttonStartArc);
             this.Name = "RunArc";
-            this.Size = new System.Drawing.Size(351, 90);
+            this.Size = new System.Drawing.Size(464, 90);
             this.ResumeLayout(false);
 
         }
@@ -174,5 +194,7 @@ namespace RobotView
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown upDownArcRadius;
         private System.Windows.Forms.Button buttonStartArc;
+        private System.Windows.Forms.Button numPadButton2;
+        private System.Windows.Forms.Button numPadButton1;
     }
 }

@@ -32,13 +32,14 @@ namespace RobotView
             this.upDownTurnAngle = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.numPadButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonTurnStart
             // 
-            this.buttonTurnStart.Location = new System.Drawing.Point(296, 14);
+            this.buttonTurnStart.Location = new System.Drawing.Point(375, 14);
             this.buttonTurnStart.Name = "buttonTurnStart";
-            this.buttonTurnStart.Size = new System.Drawing.Size(51, 24);
+            this.buttonTurnStart.Size = new System.Drawing.Size(73, 24);
             this.buttonTurnStart.TabIndex = 21;
             this.buttonTurnStart.Text = "Start";
             this.buttonTurnStart.Click += new System.EventHandler(this.buttonTurnStart_Click);
@@ -71,7 +72,7 @@ namespace RobotView
             0,
             -2147483648});
             this.upDownTurnAngle.Name = "upDownTurnAngle";
-            this.upDownTurnAngle.Size = new System.Drawing.Size(75, 40);
+            this.upDownTurnAngle.Size = new System.Drawing.Size(75, 24);
             this.upDownTurnAngle.TabIndex = 23;
             this.upDownTurnAngle.Value = new decimal(new int[] {
             90,
@@ -95,16 +96,25 @@ namespace RobotView
             this.label12.Size = new System.Drawing.Size(123, 20);
             this.label12.Text = "Angle (+/- degrees)";
             // 
+            // numPadButton
+            // 
+            this.numPadButton.Location = new System.Drawing.Point(297, 14);
+            this.numPadButton.Name = "numPadButton";
+            this.numPadButton.Size = new System.Drawing.Size(72, 24);
+            this.numPadButton.TabIndex = 26;
+            this.numPadButton.Text = "...";
+            // 
             // RunTurn
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.Controls.Add(this.numPadButton);
             this.Controls.Add(this.buttonTurnStart);
             this.Controls.Add(this.buttonTurnNeg);
             this.Controls.Add(this.upDownTurnAngle);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label12);
             this.Name = "RunTurn";
-            this.Size = new System.Drawing.Size(353, 45);
+            this.Size = new System.Drawing.Size(454, 45);
             this.ResumeLayout(false);
 
         }
@@ -116,5 +126,6 @@ namespace RobotView
         private System.Windows.Forms.NumericUpDown upDownTurnAngle;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button numPadButton;
     }
 }
