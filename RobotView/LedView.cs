@@ -36,7 +36,12 @@ namespace RobotView
             set
             {
                 ledCtrl = value;
-                ledCtrl.LedStateChanged += LedCtrl_LedStateChanged;                
+                if (ledCtrl != null)
+                    ledCtrl.LedStateChanged += LedCtrl_LedStateChanged;
+            }
+            get
+            {
+                return ledCtrl;
             }
         }
 
@@ -49,7 +54,8 @@ namespace RobotView
         {
             this.Invoke(new Action(() =>
             {
-                this.ledPictureBox.Image = state ? Resource.LedOn : Resource.LedOff;
+                if(Resource.LedOn != null && Resource.LedOff != null)
+                    this.ledPictureBox.Image = state ? Resource.LedOn : Resource.LedOff;
             }));
         }
         private void updateView()
