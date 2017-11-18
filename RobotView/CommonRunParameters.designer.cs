@@ -32,6 +32,8 @@ namespace RobotView
             this.upDownSpeed = new System.Windows.Forms.NumericUpDown();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.numPadButton1 = new System.Windows.Forms.Button();
+            this.numPadButton2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label16
@@ -102,17 +104,38 @@ namespace RobotView
             this.label18.Size = new System.Drawing.Size(172, 20);
             this.label18.Text = "Speed (+ mm/s)";
             // 
+            // numPadButton1
+            // 
+            this.numPadButton1.Location = new System.Drawing.Point(297, 20);
+            this.numPadButton1.Name = "numPadButton1";
+            this.numPadButton1.Size = new System.Drawing.Size(80, 24);
+            this.numPadButton1.TabIndex = 24;
+            this.numPadButton1.Text = "...";
+            this.numPadButton1.Click += new System.EventHandler(this.numPadButton1_Click);
+            // 
+            // numPadButton2
+            // 
+            this.numPadButton2.Location = new System.Drawing.Point(297, 50);
+            this.numPadButton2.Name = "numPadButton2";
+            this.numPadButton2.Size = new System.Drawing.Size(80, 24);
+            this.numPadButton2.TabIndex = 25;
+            this.numPadButton2.Text = "...";
+            this.numPadButton2.Click += new System.EventHandler(this.numPadButton2_Click);
+            // 
             // CommonRunParameters
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Controls.Add(this.numPadButton2);
+            this.Controls.Add(this.numPadButton1);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.upDownAcceleration);
             this.Controls.Add(this.upDownSpeed);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
             this.Name = "CommonRunParameters";
-            this.Size = new System.Drawing.Size(301, 84);
+            this.Size = new System.Drawing.Size(411, 84);
             this.ResumeLayout(false);
 
         }
@@ -124,5 +147,7 @@ namespace RobotView
         private System.Windows.Forms.NumericUpDown upDownSpeed;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button numPadButton1;
+        private System.Windows.Forms.Button numPadButton2;
     }
 }

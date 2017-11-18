@@ -168,6 +168,7 @@ namespace RobotView
             // RunArc
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Controls.Add(this.numPadButton1);
             this.Controls.Add(this.numPadButton2);
             this.Controls.Add(this.buttonArcNeg);

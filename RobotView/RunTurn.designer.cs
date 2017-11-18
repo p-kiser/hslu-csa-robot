@@ -39,7 +39,7 @@ namespace RobotView
             // 
             this.buttonTurnStart.Location = new System.Drawing.Point(375, 14);
             this.buttonTurnStart.Name = "buttonTurnStart";
-            this.buttonTurnStart.Size = new System.Drawing.Size(73, 24);
+            this.buttonTurnStart.Size = new System.Drawing.Size(77, 24);
             this.buttonTurnStart.TabIndex = 21;
             this.buttonTurnStart.Text = "Start";
             this.buttonTurnStart.Click += new System.EventHandler(this.buttonTurnStart_Click);
@@ -108,6 +108,7 @@ namespace RobotView
             // RunTurn
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Controls.Add(this.numPadButton);
             this.Controls.Add(this.buttonTurnStart);
             this.Controls.Add(this.buttonTurnNeg);
@@ -115,7 +116,7 @@ namespace RobotView
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label12);
             this.Name = "RunTurn";
-            this.Size = new System.Drawing.Size(454, 45);
+            this.Size = new System.Drawing.Size(468, 45);
             this.ResumeLayout(false);
 
         }
