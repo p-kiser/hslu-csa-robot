@@ -37,8 +37,8 @@ namespace Testat
             this.runLine = new RobotView.RunLine();
             this.driveView = new RobotView.DriveView();
             this.consoleView = new RobotView.ConsoleView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.stopButton = new System.Windows.Forms.Button();
+            this.haltButton = new System.Windows.Forms.Button();
             this.commonRunParameters = new RobotView.CommonRunParameters();
             this.SuspendLayout();
             // 
@@ -47,7 +47,7 @@ namespace Testat
             this.runTurn.Acceleration = 0.5F;
             this.runTurn.BackColor = System.Drawing.SystemColors.ControlLight;
             this.runTurn.Drive = null;
-            this.runTurn.Location = new System.Drawing.Point(404, 160);
+            this.runTurn.Location = new System.Drawing.Point(332, 160);
             this.runTurn.Name = "runTurn";
             this.runTurn.Size = new System.Drawing.Size(467, 52);
             this.runTurn.Speed = 1F;
@@ -58,7 +58,7 @@ namespace Testat
             this.runArc.Acceleration = 0.5F;
             this.runArc.BackColor = System.Drawing.SystemColors.ControlLight;
             this.runArc.Drive = null;
-            this.runArc.Location = new System.Drawing.Point(404, 218);
+            this.runArc.Location = new System.Drawing.Point(332, 218);
             this.runArc.Name = "runArc";
             this.runArc.Size = new System.Drawing.Size(467, 98);
             this.runArc.Speed = 1F;
@@ -70,51 +70,54 @@ namespace Testat
             this.runLine.BackColor = System.Drawing.SystemColors.ControlLight;
             this.runLine.Drive = null;
             this.runLine.Length = 1F;
-            this.runLine.Location = new System.Drawing.Point(404, 105);
+            this.runLine.Location = new System.Drawing.Point(332, 105);
             this.runLine.Name = "runLine";
             this.runLine.Size = new System.Drawing.Size(467, 49);
             this.runLine.Speed = 1F;
             this.runLine.TabIndex = 0;
+            this.runLine.Click += new System.EventHandler(this.runLine_Click);
             // 
             // driveView
             // 
             this.driveView.Drive = null;
             this.driveView.Location = new System.Drawing.Point(26, 31);
             this.driveView.Name = "driveView";
-            this.driveView.Size = new System.Drawing.Size(372, 324);
+            this.driveView.Size = new System.Drawing.Size(309, 324);
             this.driveView.TabIndex = 0;
             // 
             // consoleView
             // 
             this.consoleView.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.consoleView.Location = new System.Drawing.Point(26, 332);
+            this.consoleView.Location = new System.Drawing.Point(3, 332);
             this.consoleView.Name = "consoleView";
             this.consoleView.Size = new System.Drawing.Size(309, 119);
             this.consoleView.TabIndex = 0;
             // 
-            // button2
+            // stopButton
             // 
-            this.button2.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(652, 363);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(219, 56);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Stop";
+            this.stopButton.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold);
+            this.stopButton.Location = new System.Drawing.Point(565, 361);
+            this.stopButton.Name = "stopButton";
+            this.stopButton.Size = new System.Drawing.Size(234, 78);
+            this.stopButton.TabIndex = 2;
+            this.stopButton.Text = "Stop";
+            this.stopButton.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // haltButton
             // 
-            this.button1.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(404, 363);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(214, 56);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Halt";
+            this.haltButton.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold);
+            this.haltButton.Location = new System.Drawing.Point(332, 361);
+            this.haltButton.Name = "haltButton";
+            this.haltButton.Size = new System.Drawing.Size(227, 78);
+            this.haltButton.TabIndex = 3;
+            this.haltButton.Text = "Halt";
+            this.haltButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // commonRunParameters
             // 
             this.commonRunParameters.Acceleration = 0.3F;
             this.commonRunParameters.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.commonRunParameters.Location = new System.Drawing.Point(404, 22);
+            this.commonRunParameters.Location = new System.Drawing.Point(332, 22);
             this.commonRunParameters.Name = "commonRunParameters";
             this.commonRunParameters.Size = new System.Drawing.Size(467, 77);
             this.commonRunParameters.Speed = 0.5F;
@@ -125,8 +128,8 @@ namespace Testat
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(903, 471);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.haltButton);
+            this.Controls.Add(this.stopButton);
             this.Controls.Add(this.runLine);
             this.Controls.Add(this.runArc);
             this.Controls.Add(this.commonRunParameters);
@@ -150,8 +153,8 @@ namespace Testat
         private RunLine runLine;
 
         private CommonRunParameters commonRunParameters;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button stopButton;
+        private System.Windows.Forms.Button haltButton;
     }
 }
 
