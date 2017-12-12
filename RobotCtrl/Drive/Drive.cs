@@ -31,6 +31,8 @@ namespace RobotCtrl
         private Object infoLock = new object();
         private Object drivesLock = new object();
 
+        public event EventHandler DistanceToShort;
+
         private DriveInfo oldInfo;
         private DriveInfo info;
 
@@ -129,6 +131,7 @@ namespace RobotCtrl
             set { lock (this.infoLock) { this.info.Position = value; } }
         }
 
+        public Radar Radar;
 
         public bool Done { get { return track == null; } }
         #endregion
@@ -228,6 +231,10 @@ namespace RobotCtrl
         }
         #endregion
 
+        private bool isDistanceSafe()
+        {
+            return this.Radar != null ? this.Radar.Distance > 0.3f : false;
+        }
 
         #region process loop
         /// <summary>
@@ -255,6 +262,12 @@ namespace RobotCtrl
             while (run)
             {
                 Thread.Sleep(1);    // Möglichst schneller Process Control Loop
+
+                if(!isDistanceSafe())
+                {
+                    DistanceToShort(this, new EventArgs());
+                    halt = true;
+                }
 
                 if (stop)
                 {
@@ -287,7 +300,7 @@ namespace RobotCtrl
                 int deltaTicks = Environment.TickCount - ticks; // Zeit [ms]
                 ticks += deltaTicks;
                 deltaTime = deltaTicks / 1000.0f; // Zeit [s]
-
+                
                 if (track != null)
                 {
                     if ((track.Done) || ((halt && (velocity == 0))))

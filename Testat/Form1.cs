@@ -42,7 +42,7 @@ namespace Testat
                 {
                     if (e.SwitchEnabled)
                     {
-                        runner.Start();
+                        this.Invoke(new Action(() => runner.Start()));
                     } else
                     {
                         robot.Drive.Halt();

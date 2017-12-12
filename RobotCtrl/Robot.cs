@@ -19,6 +19,8 @@ namespace RobotCtrl
         private RobotConsole robotConsole;
         private Radar radar;
         private Drive drive;
+
+        private int blinkTicks;
         #endregion
 
 
@@ -28,7 +30,14 @@ namespace RobotCtrl
             this.robotConsole = new RobotConsole();
             this.radar = new Radar(Constants.IORadarSensor);
             this.drive = new Drive();
-            //this.Blink();
+            this.drive.Radar = this.radar;
+
+            drive.DistanceToShort += Drive_DistanceToShort;
+        }
+
+        private void Drive_DistanceToShort(object sender, EventArgs e)
+        {
+            this.Blink();
         }
 
         /// <summary>
@@ -77,16 +86,22 @@ namespace RobotCtrl
         public PositionInfo Position { get { return drive.Position; } set { drive.Position = value; } }
         #endregion
 
-        #region methods
+
         public void Blink()
         {
-            for (int i = 0; i < Constants.numberOfBlinks; i++)
+            int newTicks = Environment.TickCount / Constants.blinkCadence;
+
+            if (newTicks > blinkTicks)
             {
-                TurnOnTheLights(true);
-                Thread.Sleep(Constants.blinkCadence);
-                TurnOnTheLights(false);
-                Thread.Sleep(Constants.blinkCadence);
+                ToggleTheLights();
+                blinkTicks = newTicks;
             }
+        }
+
+        private void ToggleTheLights()
+        {
+            bool enabled = robotConsole[Leds.Led1].LedEnabled;
+            TurnOnTheLights(!enabled);
         }
 
         private void TurnOnTheLights(bool turnOn)
@@ -96,6 +111,5 @@ namespace RobotCtrl
                 robotConsole[(Leds)i].LedEnabled = turnOn;
             }
         }
-        #endregion
     }
 }

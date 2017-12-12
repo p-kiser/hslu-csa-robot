@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Command.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Drive\Drive.cs" />
     <Compile Include="Drive\DriveInfo.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="Input\Switch.cs" />
     <Compile Include="Input\SwitchEventArgs.cs" />
     <Compile Include="IOPort.cs" />
+    <Compile Include="Monitor.cs" />
     <Compile Include="Output\DigitalOut.cs" />
     <Compile Include="Output\Led.cs" />
     <Compile Include="Output\LedEventArgs.cs" />

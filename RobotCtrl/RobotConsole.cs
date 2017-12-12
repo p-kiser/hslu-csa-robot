@@ -37,7 +37,6 @@ namespace RobotCtrl
             digitalIn = new DigitalIn(Constants.IOConsoleSWITCH);
             digitalOut = new DigitalOut(Constants.IOConsoleLED);
 
-
             this.leds = new Led[4];
             for (int i = 0; i < this.leds.Length; i++)
             {

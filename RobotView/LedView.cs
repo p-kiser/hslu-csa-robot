@@ -54,8 +54,7 @@ namespace RobotView
         {
             this.Invoke(new Action(() =>
             {
-                if(Resource.LedOn != null && Resource.LedOff != null)
-                    this.ledPictureBox.Image = state ? Resource.LedOn : Resource.LedOff;
+               this.ledPictureBox.Image = state ? Resource.LedOn : Resource.LedOff;
             }));
         }
         private void updateView()
