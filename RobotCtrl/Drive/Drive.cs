@@ -263,7 +263,7 @@ namespace RobotCtrl
             {
                 Thread.Sleep(1);    // Möglichst schneller Process Control Loop
 
-                if(!isDistanceSafe())
+                if(!isDistanceSafe() && false)
                 {
                     DistanceToShort(this, new EventArgs());
                     halt = true;

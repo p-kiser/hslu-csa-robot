@@ -61,11 +61,14 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="CommandConsoleTest.cs" />
+    <Compile Include="FileMonitorTest.cs" />
     <Compile Include="Input\DigitalInTest.cs" />
     <Compile Include="Input\SwitchTest.cs" />
     <Compile Include="Output\DigitalOutTest.cs" />
     <Compile Include="Output\LedTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SocketCLITest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RobotCtrl\RobotCtrl.csproj">

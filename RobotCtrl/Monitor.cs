@@ -5,7 +5,7 @@ using System.Text;
 
 namespace RobotCtrl
 {
-    interface Monitor
+    public interface Monitor
     {
         void start(Command cmd);
 
@@ -13,6 +13,6 @@ namespace RobotCtrl
 
         void clear();
 
-        System.IO.StreamReader dump();
+        string dump();
     }
 }

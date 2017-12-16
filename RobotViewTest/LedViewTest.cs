@@ -20,18 +20,5 @@ namespace RobotViewTest
             ledView = new LedView();
             ledMock = new Mock<Led>();
         }
-
-        [TestMethod]
-        public void TestLedStateChange()
-        {
-            ledView.LedCtrl = ledMock.Object;
-            ledMock.Object.OnLedStateChanged(new LedEventArgs(Leds.Led1, true));
-
-            Assert.IsTrue(ledView.State);
-
-            ledMock.Object.OnLedStateChanged(new LedEventArgs(Leds.Led1, false));
-
-            Assert.IsFalse(ledView.State);
-        }
     }
 }

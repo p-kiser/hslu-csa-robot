@@ -5,19 +5,14 @@ using System.Text;
 
 namespace RobotCtrl
 {
-    interface Runnable
+    public interface Command
     {
-        Start();
-
-    }
-
-    interface Command
-    {
-        void execute(Track track);
+        bool execute(List<String> track);
 
         void executeQueue();
 
-        void addQueue(Track track);
+        void addQueue(string track);
+
         void clearQueue();
 
         PositionInfo getPosition();
