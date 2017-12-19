@@ -5,6 +5,7 @@ using System.Text;
 using System.Net.Sockets;
 using System.Net;
 using System.IO;
+using System.Threading;
 
 namespace RobotCtrl
 {
@@ -56,6 +57,11 @@ namespace RobotCtrl
                                 monitor.start(cmd);
                                 cmd.executeQueue();
                                 monitor.stop();
+                                break;
+                            case "dump":
+                                writer.WriteLine(monitor.dump());
+                                writer.WriteLine("EOS");
+                                writer.Flush();
                                 break;
                             default:
                                 cmd.addQueue(line);

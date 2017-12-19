@@ -57,7 +57,7 @@ namespace RobotCtrl
         public void clear()
         {
             File.Delete(path);
-            writeLine("Team xy");
+            writeLine("Team 14");
         }
 
         public string dump()
@@ -96,6 +96,7 @@ namespace RobotCtrl
         {
             if(isRunning)
             {
+                isRunning = false;
                 shouldExit = true;
                 thread.Join();
             }

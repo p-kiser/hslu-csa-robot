@@ -53,7 +53,7 @@ namespace CLIClient
                             }
                             try
                             {
-                                client.Connect(address.ToString(), port);
+                                client = new TcpClient(address.ToString(), port);
                             }
                             catch (Exception ex)
                             {
@@ -84,6 +84,7 @@ namespace CLIClient
                                 Console.WriteLine(netStream.ReadLine());
                                 break;
                             case "help":
+                            case "dump":
                                 string line = "";
                                 while((line = netStream.ReadLine()) != "EOS")
                                 {

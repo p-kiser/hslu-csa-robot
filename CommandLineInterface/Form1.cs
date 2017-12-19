@@ -26,7 +26,7 @@ namespace CommandLineInterface
             cli = new CommandConsole();
             monitor = new FileMonitor(file);
             server = new CLIServer(cli, monitor);
-            iServer = new IterativerServer();
+            iServer = new IterativerServer(monitor);
 
             server.listen();
 

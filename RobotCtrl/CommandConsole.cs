@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Threading;
 
 namespace RobotCtrl
 {
@@ -102,7 +103,7 @@ namespace RobotCtrl
             {
                 execute(t.Split(' ').ToList());
                 // blocking wait
-                while(!robot.Drive.Done) { }
+                while (!robot.Drive.Done) { }
             });
             clearQueue();
         }

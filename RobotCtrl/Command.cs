@@ -11,6 +11,8 @@ namespace RobotCtrl
 
         void executeQueue();
 
+        void stop();
+
         void addQueue(string track);
 
         void clearQueue();

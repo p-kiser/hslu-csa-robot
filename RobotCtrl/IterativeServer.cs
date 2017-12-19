@@ -13,12 +13,12 @@ namespace RobotCtrl
     {
         private static bool isRunning = false;
         private static volatile bool shouldExit = false;
-        private static FileMonitor monitor;
+        private static Monitor monitor;
 
         Thread thread;
-        public IterativerServer()
+        public IterativerServer(Monitor mon)
         {
-            monitor = new FileMonitor();
+            monitor = mon;
             this.start();
         }
 
@@ -49,15 +49,20 @@ namespace RobotCtrl
                 IPAddress ipAddress = IPAddress.Any;
                 TcpListener listen = new TcpListener(ipAddress, 7070);
                 listen.Start();
-                while (true)
+                Console.WriteLine("Warte auf Verbindung auf Port " +
+                listen.LocalEndpoint + "...");
+                TcpClient client;
+                while ((client = listen.AcceptTcpClient()) != null)
                 {
-                    Console.WriteLine("Warte auf Verbindung auf Port " +
-                    listen.LocalEndpoint + "...");
-                    TcpClient client = listen.AcceptTcpClient();
                     Console.WriteLine("Verbindung zu " +
                     client.Client.RemoteEndPoint);
                     StreamWriter sw = new StreamWriter(client.GetStream(), Encoding.ASCII);
+                    string res = monitor.dump();
+                    sw.WriteLine("HTTP/1.1 200 OK");
+                    sw.WriteLine("Content-Length: " + res.LongCount());
+                    sw.WriteLine("Content-Type: text/csv" + sw.NewLine);
                     sw.WriteLine(monitor.dump());
+
                     sw.Flush();
                     client.Close();
                 }
