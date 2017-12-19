@@ -83,7 +83,7 @@ namespace CLIClient
                             case "connect":
                                 Console.WriteLine(netStream.ReadLine());
                                 break;
-                            case "print":
+                            case "help":
                                 string line = "";
                                 while((line = netStream.ReadLine()) != "EOS")
                                 {
