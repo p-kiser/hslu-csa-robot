@@ -19,6 +19,7 @@ namespace RobotCtrl
         public IterativerServer()
         {
             monitor = new FileMonitor();
+            this.start();
         }
 
         public void start()
@@ -56,8 +57,6 @@ namespace RobotCtrl
                     Console.WriteLine("Verbindung zu " +
                     client.Client.RemoteEndPoint);
                     StreamWriter sw = new StreamWriter(client.GetStream(), Encoding.ASCII);
-
-                    //writeHeader(sw);
                     sw.WriteLine(monitor.dump());
                     sw.Flush();
                     client.Close();
