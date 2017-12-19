@@ -14,6 +14,8 @@ namespace RobotCtrl
         void addQueue(string track);
 
         void clearQueue();
+    
+        string getHelp();
 
         PositionInfo getPosition();
     }

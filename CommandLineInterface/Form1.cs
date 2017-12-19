@@ -16,6 +16,7 @@ namespace CommandLineInterface
         public static string file = System.IO.Path.GetTempFileName();
         private Monitor monitor;
         CommandConsole cli;
+        CLIServer server;
 
         public Form1()
         {
@@ -23,17 +24,9 @@ namespace CommandLineInterface
 
             cli = new CommandConsole();
             monitor = new FileMonitor(file);
+            server = new CLIServer(cli, monitor);
 
-            cli.print();
-
-            cli.addQueue("RunLine 1");
-            cli.addQueue("RunTurn 90");
-            cli.addQueue("RunArcLeft 0.5 45");
-            cli.addQueue("RunArcRight 0.5 45");
-
-            monitor.start(cli);
-            cli.executeQueue();
-            monitor.stop();
+            server.listen();
 
             Console.WriteLine(monitor.dump());
         }

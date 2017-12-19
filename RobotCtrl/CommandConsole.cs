@@ -34,10 +34,7 @@ namespace RobotCtrl
 
         public void print()
         {
-            AVAILABLE_TRACKS.ToList().ForEach(v =>
-           {
-               Console.WriteLine("CMD: " + v.Key + " PARS: " + v.Value);
-           });
+            Console.WriteLine(getHelp());
         }
 
         public void addQueue(string track)
@@ -51,6 +48,15 @@ namespace RobotCtrl
             tracks.Clear();
         }
  
+        public string getHelp()
+        {
+            string res = "";
+            foreach (KeyValuePair<string, int> v in AVAILABLE_TRACKS)
+            {
+                res += "CMD: " + v.Key + " PARS: " + v.Value + "\n";
+            };
+            return res;
+        }
         public bool execute(List<String> track)
         {
             List<Object> pars = new List<object>();

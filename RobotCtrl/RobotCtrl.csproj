@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CLIServer.cs" />
     <Compile Include="Command.cs" />
     <Compile Include="CommandConsole.cs" />
     <Compile Include="Constants.cs" />
