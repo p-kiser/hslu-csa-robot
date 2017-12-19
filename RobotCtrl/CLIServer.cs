@@ -15,13 +15,16 @@ namespace RobotCtrl
         TcpListener listener;
         Command cmd;
         IPAddress ipAddress;
-        public CLIServer(Command cmd)
+        Monitor monitor;
+
+        public CLIServer(Command cmd, Monitor monitor)
         {
             listener = new TcpListener(
                 IPAddress.Any, 
                 PORT
             );
             this.cmd = cmd;
+            this.monitor = monitor;
             listener.Start();
         }
 
@@ -44,12 +47,15 @@ namespace RobotCtrl
                     {
                         switch (line)
                         {
-                            case "print":
+                            case "help":
                                 writer.WriteLine(cmd.getHelp());
+                                writer.WriteLine("EOS");
                                 writer.Flush();
                                 break;
                             case "start":
+                                monitor.start(cmd);
                                 cmd.executeQueue();
+                                monitor.stop();
                                 break;
                             default:
                                 cmd.addQueue(line);
