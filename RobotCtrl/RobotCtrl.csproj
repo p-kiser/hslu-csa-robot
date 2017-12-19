@@ -60,6 +60,7 @@
     <Compile Include="Input\Switch.cs" />
     <Compile Include="Input\SwitchEventArgs.cs" />
     <Compile Include="IOPort.cs" />
+    <Compile Include="IterativeServer.cs" />
     <Compile Include="Monitor.cs" />
     <Compile Include="Output\DigitalOut.cs" />
     <Compile Include="Output\Led.cs" />
