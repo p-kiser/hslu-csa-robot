@@ -17,6 +17,7 @@ namespace CommandLineInterface
         private Monitor monitor;
         CommandConsole cli;
         CLIServer server;
+        IterativerServer iServer;
 
         public Form1()
         {
@@ -25,6 +26,7 @@ namespace CommandLineInterface
             cli = new CommandConsole();
             monitor = new FileMonitor(file);
             server = new CLIServer(cli, monitor);
+            iServer = new IterativerServer();
 
             server.listen();
 
