@@ -15,9 +15,6 @@ namespace CLIClient
             string cmd;
             while ((cmd = Console.ReadLine()) != "exit")
             {
-
-                Thread.Sleep(4000);
-
                 // clear any reads
                 Console.WriteLine(cmd);
             }
