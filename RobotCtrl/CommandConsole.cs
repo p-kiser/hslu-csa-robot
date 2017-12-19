@@ -112,5 +112,10 @@ namespace RobotCtrl
         {
             return robot.Position;
         }
+
+        public void stop()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
