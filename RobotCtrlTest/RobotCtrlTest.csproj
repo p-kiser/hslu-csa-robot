@@ -61,6 +61,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="CLIServerTests.cs" />
     <Compile Include="CommandConsoleTest.cs" />
     <Compile Include="FileMonitorTest.cs" />
     <Compile Include="Input\DigitalInTest.cs" />
